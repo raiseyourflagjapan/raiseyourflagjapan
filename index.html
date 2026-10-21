@@ -31,6 +31,7 @@
   color-scheme:light;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 body{background:var(--ivory);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -248,6 +249,24 @@ section{padding-block:clamp(80px,9vw,120px)}
 .acc-panel{padding:0 56px 22px 0;color:var(--ink-soft)}
 
 /* Register */
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:var(--sand-2);border-radius:999px;padding:5px}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.seg label > span{display:flex;align-items:center;justify-content:center;text-align:center;min-height:44px;padding:6px 14px;border-radius:999px;font-weight:600;font-size:14.5px;color:var(--ink-soft);line-height:1.3}
+.seg input:checked + span{background:var(--teal);color:var(--white)}
+.seg input:focus-visible + span{outline:3px solid var(--focus);outline-offset:2px}
+.fs{display:grid;gap:18px}
+.field select{width:100%;min-height:50px;border:1px solid #CFC6B4;border-radius:4px;padding:12px 14px;font:inherit;font-size:16px;background:var(--white);color:var(--ink)}
+.field select:focus{outline:3px solid var(--focus);outline-offset:1px;border-color:var(--focus)}
+.field[data-invalid="true"] select{border-color:var(--err)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.thanks{text-align:left;gap:14px}
+.thanks .ok{width:52px;height:52px;border-radius:50%;background:var(--teal);color:var(--sand);display:flex;align-items:center;justify-content:center}
+.thanks .ok svg{width:26px;height:26px}
+.thanks h3{font-family:var(--serif);font-size:30px;line-height:1.2;color:var(--teal);font-weight:400}
+:root[data-lang="ja"] .thanks h3{font-family:var(--jp);font-weight:700;font-size:22px}
+button[aria-busy="true"]{opacity:.7;cursor:progress}
+@media (max-width:700px){.seg{border-radius:14px}.seg label > span{border-radius:10px}}
 .register{background:var(--teal);color:var(--ivory)}
 .register .h2{color:var(--white)}
 .register .eyebrow{color:var(--sand)}
@@ -668,23 +687,56 @@ section{padding-block:clamp(80px,9vw,120px)}
       </ol>
     </div>
     <form class="form" id="interest-form" novalidate>
-      <div class="row">
-        <div class="field" id="f-name"><label for="name"><span class="en">Full name</span><span class="ja">氏名</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-err"><p class="err" id="name-err" aria-live="polite"></p></div>
-        <div class="field" id="f-email"><label for="email"><span class="en">Email</span><span class="ja">メールアドレス</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err"><p class="err" id="email-err" aria-live="polite"></p></div>
+      <div class="seg" role="radiogroup" aria-label="Registration type">
+        <label><input type="radio" name="type" value="individual" checked><span><span class="en">Individual</span><span class="ja">個人</span></span></label>
+        <label><input type="radio" name="type" value="group"><span><span class="en">Group</span><span class="ja">団体（学校・組織）</span></span></label>
       </div>
-      <div class="row">
-        <div class="field" id="f-country"><label for="country"><span class="en">Country / region</span><span class="ja">国・地域</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="country" name="country" type="text" autocomplete="country-name" required aria-describedby="country-err"><p class="err" id="country-err" aria-live="polite"></p></div>
-        <div class="field" id="f-school"><label for="school"><span class="en">School / organisation</span><span class="ja">学校・所属</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="school" name="school" type="text" autocomplete="organization" required aria-describedby="school-err"><p class="err" id="school-err" aria-live="polite"></p></div>
+      <div class="fs" data-mode="individual">
+        <div class="row">
+          <div class="field" id="f-name"><label for="name"><span class="en">Full name</span><span class="ja">氏名</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-err"><p class="err" id="name-err" aria-live="polite"></p></div>
+          <div class="field" id="f-email"><label for="email"><span class="en">Email</span><span class="ja">メールアドレス</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err"><p class="err" id="email-err" aria-live="polite"></p></div>
+        </div>
+        <div class="row">
+          <div class="field" id="f-country"><label for="country"><span class="en">Country / region</span><span class="ja">国・地域</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="country" name="country" type="text" autocomplete="country-name" required aria-describedby="country-err"><p class="err" id="country-err" aria-live="polite"></p></div>
+          <div class="field" id="f-school"><label for="school"><span class="en">School / organisation</span><span class="ja">学校・所属</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="school" name="school" type="text" autocomplete="organization" required aria-describedby="school-err"><p class="err" id="school-err" aria-live="polite"></p></div>
+        </div>
+      </div>
+      <div class="fs" data-mode="group" hidden>
+        <div class="row">
+          <div class="field" id="f-organisation"><label for="organisation"><span class="en">School / organisation</span><span class="ja">学校・団体名</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="organisation" name="organisation" type="text" autocomplete="organization" required aria-describedby="organisation-err"><p class="err" id="organisation-err" aria-live="polite"></p></div>
+          <div class="field" id="f-contact"><label for="contact"><span class="en">Contact person</span><span class="ja">担当者名</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="contact" name="contact" type="text" autocomplete="name" required aria-describedby="contact-err"><p class="err" id="contact-err" aria-live="polite"></p></div>
+        </div>
+        <div class="row">
+          <div class="field" id="f-g_email"><label for="g_email"><span class="en">Email</span><span class="ja">メールアドレス</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="g_email" name="g_email" type="email" autocomplete="email" required aria-describedby="g_email-err"><p class="err" id="g_email-err" aria-live="polite"></p></div>
+          <div class="field" id="f-role"><label for="role"><span class="en">Role / position</span><span class="ja">役職</span> <span class="req"><span class="en">(optional)</span><span class="ja">（任意）</span></span></label><input id="role" name="role" type="text" autocomplete="organization-title"></div>
+        </div>
+        <div class="row">
+          <div class="field" id="f-g_country"><label for="g_country"><span class="en">Country / region</span><span class="ja">国・地域</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="g_country" name="g_country" type="text" autocomplete="country-name" required aria-describedby="g_country-err"><p class="err" id="g_country-err" aria-live="polite"></p></div>
+          <div class="field" id="f-size"><label for="size"><span class="en">Expected group size</span><span class="ja">参加予定人数</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><select id="size" name="size" required aria-describedby="size-err"><option value="">—</option><option>2–5</option><option>6–10</option><option>11–20</option><option value="20+">More than 20 / 20名以上</option><option value="Not sure yet">Not sure yet / 未定</option></select><p class="err" id="size-err" aria-live="polite"></p></div>
+        </div>
+        <div class="field" id="f-timing"><label for="timing"><span class="en">Preferred timing (e.g. July 2027)</span><span class="ja">希望時期（例：2027年7月）</span> <span class="req"><span class="en">(optional)</span><span class="ja">（任意）</span></span></label><input id="timing" name="timing" type="text"></div>
       </div>
       <div class="field"><label for="message"><span class="en">Message (optional)</span><span class="ja">ご質問・ご要望（任意）</span></label><textarea id="message" name="message" rows="4"></textarea></div>
+      <div class="hp" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
       <p class="privacy"><span class="en">We use your details only to send you updates about Japan Education Journey.</span><span class="ja">ご入力いただいた情報は、Japan Education Journeyのご案内にのみ使用します。</span></p>
-      <button class="btn btn-primary" type="submit" style="justify-self:start"><span class="en">Register Your Interest</span><span class="ja">参加希望を登録する</span></button>
-      <div class="form-status" id="form-status" role="status" aria-live="polite" hidden>
+      <button class="btn btn-primary" type="submit" id="submit-btn" style="justify-self:start"><span class="en">Register Your Interest</span><span class="ja">参加希望を登録する</span></button>
+      <div class="form-status" id="status-off" role="status" aria-live="polite" hidden>
         <strong><span class="en">Your details have not been sent.</span><span class="ja">入力内容はまだ送信されていません。</span></strong>
         <span><span class="en">Online registration is not connected yet, so nothing was saved. To register now, please email us:</span><span class="ja">オンライン登録は準備中のため、情報は保存・送信されていません。今すぐ登録をご希望の方はメールでご連絡ください。</span></span>
-        <span class="email-row"><code id="contact-email">raiseyourflag.japan@gmail.com</code><button type="button" class="copy-btn" id="copy-email"><span class="en">Copy address</span><span class="ja">アドレスをコピー</span></button><span id="copy-msg" class="note" aria-live="polite"></span></span>
+        <span class="email-row"><code class="contact-email">raiseyourflag.japan@gmail.com</code></span>
+      </div>
+      <div class="form-status" id="status-err" role="alert" hidden>
+        <strong><span class="en">Something went wrong and your details were not saved.</span><span class="ja">送信できませんでした。入力内容は保存されていません。</span></strong>
+        <span><span class="en">Please try again in a moment, or email us:</span><span class="ja">少し時間をおいて再度お試しいただくか、メールでご連絡ください。</span></span>
+        <span class="email-row"><code class="contact-email">raiseyourflag.japan@gmail.com</code></span>
       </div>
     </form>
+    <div class="form thanks" id="thanks" tabindex="-1" hidden>
+      <span class="ok" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 14.5l5 5 11-12"/></svg></span>
+      <h3><span class="en">Thank you for registering!</span><span class="ja">ご登録ありがとうございます。</span></h3>
+      <p><span class="en">We have received your details and sent a confirmation email. We will contact you with the dates and full details as soon as they are confirmed.</span><span class="ja">ご登録内容を受け付け、確認メールをお送りしました。開催日程と詳細が決まり次第、ご連絡します。</span></p>
+      <p class="note"><span class="en">No email? Please check your spam folder, or contact raiseyourflag.japan@gmail.com.</span><span class="ja">メールが届かない場合は、迷惑メールフォルダをご確認いただくか、raiseyourflag.japan@gmail.com までご連絡ください。</span></p>
+    </div>
   </div>
 </section>
 
@@ -737,24 +789,41 @@ section{padding-block:clamp(80px,9vw,120px)}
   document.querySelectorAll('img').forEach(function(img){
     img.addEventListener('error',function(){var d=document.createElement('div');d.className='img-fallback';d.setAttribute('role','img');d.setAttribute('aria-label',img.alt);d.textContent=img.alt;img.replaceWith(d);},{once:true});
   });
-  var form=document.getElementById('interest-form'),status=document.getElementById('form-status'),touched=false,fields=['name','email','country','school'];
+  var ENDPOINT='';
+  var form=document.getElementById('interest-form'),thanks=document.getElementById('thanks'),btn=document.getElementById('submit-btn'),
+      sOff=document.getElementById('status-off'),sErr=document.getElementById('status-err'),touched=false;
+  var SETS={individual:['name','email','country','school'],group:['organisation','contact','g_email','g_country','size']};
+  function mode(){return form.querySelector('input[name="type"]:checked').value;}
+  function hideStatus(){sOff.hidden=true;sErr.hidden=true;}
   function check(id){
     var el=document.getElementById(id),err=document.getElementById(id+'-err'),v=el.value.trim(),m='';
-    if(!v){m=msgs[lang()].required;}else if(id==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){m=msgs[lang()].email;}
+    if(!v){m=msgs[lang()].required;}else if(el.type==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){m=msgs[lang()].email;}
     err.textContent=m; el.setAttribute('aria-invalid',m?'true':'false'); document.getElementById('f-'+id).setAttribute('data-invalid',m?'true':'false'); return !m;
   }
-  function revalidate(){if(touched){fields.forEach(check);}}
-  fields.forEach(function(id){var el=document.getElementById(id);el.addEventListener('blur',function(){if(touched||el.value)check(id);});el.addEventListener('input',function(){if(touched)check(id);status.hidden=true;});});
+  function revalidate(){if(touched){SETS[mode()].forEach(check);}}
+  Object.keys(SETS).forEach(function(k){SETS[k].forEach(function(id){var el=document.getElementById(id);
+    el.addEventListener('blur',function(){if(touched||el.value)check(id);});
+    el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){if(touched)check(id);hideStatus();});});});
+  form.querySelectorAll('input[name="type"]').forEach(function(r){r.addEventListener('change',function(){
+    form.querySelectorAll('.fs').forEach(function(f){f.hidden=f.getAttribute('data-mode')!==mode();});touched=false;hideStatus();});});
+  function val(id){return document.getElementById(id).value.trim();}
   form.addEventListener('submit',function(e){
-    e.preventDefault();touched=true;var ok=true,first=null;
-    fields.forEach(function(id){if(!check(id)){ok=false;if(!first)first=document.getElementById(id);}});
-    if(!ok){status.hidden=true;first.focus();return;}
-    status.hidden=false;status.scrollIntoView({block:'nearest',behavior:'smooth'});
-  });
-  document.getElementById('copy-email').addEventListener('click',function(){
-    var t=document.getElementById('contact-email').textContent,out=document.getElementById('copy-msg');
-    function fallback(){var r=document.createRange();r.selectNodeContents(document.getElementById('contact-email'));var s=window.getSelection();s.removeAllRanges();s.addRange(r);out.textContent=msgs[lang()].copyFail;}
-    try{navigator.clipboard.writeText(t).then(function(){out.textContent=msgs[lang()].copied;},fallback);}catch(e){fallback();}
+    e.preventDefault();touched=true;hideStatus();var ok=true,first=null,m=mode();
+    SETS[m].forEach(function(id){if(!check(id)){ok=false;if(!first)first=document.getElementById(id);}});
+    if(!ok){first.focus();return;}
+    if(!ENDPOINT){sOff.hidden=false;sOff.scrollIntoView({block:'nearest',behavior:'smooth'});return;}
+    var d=new URLSearchParams();d.append('type',m);d.append('lang',lang());d.append('message',val('message'));d.append('website',val('website'));
+    if(m==='group'){d.append('organisation',val('organisation'));d.append('contact',val('contact'));d.append('role',val('role'));d.append('email',val('g_email'));d.append('country',val('g_country'));d.append('size',val('size'));d.append('timing',val('timing'));}
+    else{d.append('name',val('name'));d.append('email',val('email'));d.append('country',val('country'));d.append('school',val('school'));}
+    btn.disabled=true;btn.setAttribute('aria-busy','true');
+    fetch(ENDPOINT,{method:'POST',body:d}).then(function(r){return r.json();}).then(function(res){
+      if(!res||!res.ok)throw new Error('save');
+      form.hidden=true;thanks.hidden=false;thanks.focus();thanks.scrollIntoView({block:'center',behavior:'smooth'});
+      try{(window.dataLayer=window.dataLayer||[]).push({event:'jej_register',registration_type:m});
+        if(window.gtag)gtag('event','generate_lead',{registration_type:m});
+        if(window.fbq)fbq('track','Lead',{content_category:m});}catch(x){}
+    }).catch(function(){sErr.hidden=false;sErr.scrollIntoView({block:'nearest',behavior:'smooth'});})
+    .then(function(){btn.disabled=false;btn.removeAttribute('aria-busy');});
   });
   var mcta=document.getElementById('mcta'),reg=document.getElementById('register'),hero=document.querySelector('.hero');
   if('IntersectionObserver' in window&&mcta){var vis={};var io=new IntersectionObserver(function(es){es.forEach(function(e){vis[e.target===reg?'r':'h']=e.isIntersecting;});mcta.setAttribute('data-hidden',String(!!(vis.r||vis.h)));});io.observe(reg);io.observe(hero);}
