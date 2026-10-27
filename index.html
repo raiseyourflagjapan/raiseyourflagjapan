@@ -134,6 +134,18 @@ section{padding-block:clamp(80px,9vw,120px)}
 .school-link{justify-self:start;display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;color:var(--teal);text-decoration:none;border-bottom:1.5px solid var(--teal)}
 .school-link:hover{border-color:var(--sand)}
 
+/* Jiyu photos */
+.school-photo{margin:0;position:relative;aspect-ratio:16/7;max-width:100%;overflow:hidden;background:var(--sand-2)}
+.school-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.school-photo .tag{position:absolute;left:16px;top:14px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--white);background:rgba(16,39,44,.72);padding:5px 10px;border-radius:999px}
+.jiyu-gallery{margin-top:clamp(20px,3vw,32px);display:grid;grid-template-columns:minmax(0,2.03fr) minmax(0,1fr);gap:clamp(12px,2vw,20px)}
+.jiyu-gallery figure{margin:0;position:relative;border-radius:6px;overflow:hidden;background:var(--sand-2)}
+.jiyu-gallery figure:first-child{aspect-ratio:2.03/1}
+.jiyu-gallery figure:nth-child(2){aspect-ratio:1/1}
+.jiyu-gallery img{width:100%;height:100%;object-fit:cover}
+.jiyu-gallery .note{grid-column:1 / -1}
+@media (max-width:700px){.jiyu-gallery{grid-template-columns:1fr}.jiyu-gallery figure:nth-child(2){aspect-ratio:4/3}}
+
 /* Schedule */
 .schedule{background:var(--white);border-top:1px solid var(--line)}
 .days{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 22px}
@@ -451,7 +463,7 @@ button[aria-busy="true"]{opacity:.7;cursor:progress}
     </div>
     <div class="school-grid">
       <article class="school">
-        <div class="plate" aria-hidden="true"><span class="tag">Day 2 · School 1</span><span class="kanji">自由学園</span></div>
+        <figure class="school-photo"><img loading="lazy" decoding="async" src="assets/jiyu_campus.webp" width="1200" height="600" alt="Students walking along a tree-lined path on the Jiyu Gakuen campus"><span class="tag">Day 2 · School 1</span><figcaption class="ph-credit"><span class="en">Photo: Jiyu Gakuen</span><span class="ja">写真：自由学園</span></figcaption></figure>
         <div class="school-body">
           <h3><span class="en">Jiyu Gakuen</span><span class="ja">自由学園</span></h3>
           <p class="meta"><span class="en">Higashikurume, Tokyo · Private · Founded 1921</span><span class="ja">東京都東久留米市｜私立・1921年創立</span></p>
@@ -467,6 +479,11 @@ button[aria-busy="true"]{opacity:.7;cursor:progress}
           <p class="note" style="font-size:15.5px"><span class="en">The school's name, profile and website will be added once confirmed.</span><span class="ja">学校名・紹介・ホームページは、確定後に掲載します。</span></p>
         </div>
       </article>
+    </div>
+    <div class="jiyu-gallery">
+      <figure><img loading="lazy" decoding="async" src="assets/jiyu_class.webp" width="1100" height="543" alt="A student thinking during a lesson in a wooden classroom at Jiyu Gakuen"><figcaption class="ph-credit"><span class="en">Photo: Jiyu Gakuen</span><span class="ja">写真：自由学園</span></figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="assets/jiyu_harvest.webp" width="800" height="800" alt="Jiyu Gakuen students holding bundles of rice they harvested"><figcaption class="ph-credit"><span class="en">Photo: Jiyu Gakuen</span><span class="ja">写真：自由学園</span></figcaption></figure>
+      <p class="note"><span class="en">Scenes from Jiyu Gakuen, where students take part in running daily school life, from meals to growing food.</span><span class="ja">自由学園の様子。食事づくりや作物の栽培など、生徒が学校生活の運営に関わっています。</span></p>
     </div>
   </div>
 </section>
@@ -490,7 +507,7 @@ button[aria-busy="true"]{opacity:.7;cursor:progress}
         <p><span class="en">Meet your group and facilitator. An orientation sets the questions you will take into schools, followed by a welcome dinner.</span><span class="ja">参加者とファシリテーターが顔を合わせます。学校で考えたい問いをオリエンテーションで整理し、歓迎の夕食へ。</span></p>
       </li>
       <li class="day sv">
-        <figure><img loading="lazy" decoding="async" src="assets/classroom.webp" width="540" height="360" alt="A Japanese classroom with wooden desks and a blackboard"><figcaption class="ph-credit"><span class="en">Illustrative</span><span class="ja">イメージ</span></figcaption></figure>
+        <figure><img loading="lazy" decoding="async" src="assets/jiyu_lesson.webp" width="1100" height="733" alt="Two Jiyu Gakuen students examining a sample under a microscope"><figcaption class="ph-credit"><span class="en">Photo: Jiyu Gakuen</span><span class="ja">写真：自由学園</span></figcaption></figure>
         <p class="chap"><span class="en">Step inside Japanese classrooms</span><span class="ja">日本の教育現場に触れる</span></p>
         <div class="label"><b>Day 2</b><span class="pill"><span class="en">School 1</span><span class="ja">学校訪問</span></span></div>
         <h3><span class="en">Visit Japanese School 1</span><span class="ja">1校目を訪問</span></h3>
