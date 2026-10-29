@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Japan Education Journey</title>
-<meta name="description" content="A 7-day professional learning journey in Japan for teachers. Visit two schools in Tokyo, meet Japanese educators, and experience culture in Kyoto and Osaka. US$3,500 per participant.">
-<meta property="og:title" content="Japan Education Journey — See Education Differently.">
-<meta property="og:description" content="A 7-day professional learning journey in Japan for educators. Discover Japanese schools. Reimagine your teaching.">
+<meta name="description" content="Custom educational tours to Japan for travel agencies: Japanese school visits, student exchange, travel and culture in Tokyo, Kyoto, Osaka and beyond, for student and educator groups.">
+<meta property="og:title" content="Japan Education Journey — Japanese school visits, built around your groups">
+<meta property="og:description" content="Custom educational tours to Japan for student and educator groups. For travel agencies and tour operators.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -344,6 +344,79 @@ button[aria-busy="true"]{opacity:.7;cursor:progress}
   .hero .wrap{padding-block:72px 32px}
   .highlights{margin-top:44px}
 }
+
+/* ---------- B2B (travel partners) ---------- */
+.why-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.why{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:28px 24px;display:grid;gap:12px;align-content:start}
+.why .ico{width:48px;height:48px;border-radius:50%;background:var(--teal);color:var(--sand);display:flex;align-items:center;justify-content:center}
+.why .ico svg{width:24px;height:24px}
+.why h3{font-family:var(--serif);font-size:22px;line-height:1.2;color:var(--teal)}
+:root[data-lang="ja"] .why h3{font-family:var(--jp);font-weight:700;font-size:17px;line-height:1.55}
+.why p{font-size:15px;color:var(--ink-soft);line-height:1.55}
+
+.services{background:var(--teal);color:var(--ivory)}
+.services .eyebrow{color:var(--sand)}
+.services .h2{color:var(--white)}
+.services .lede{color:rgba(247,245,240,.78)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(230,214,184,.3)}
+.svc{padding:26px 24px 26px 0;display:grid;grid-template-columns:28px minmax(0,1fr);gap:4px 14px;border-bottom:1px solid rgba(230,214,184,.18)}
+.svc:nth-child(3n+2),.svc:nth-child(3n){padding-left:24px;border-left:1px solid rgba(230,214,184,.18)}
+.svc svg{grid-row:1 / span 2;width:26px;height:26px;color:var(--sand);margin-top:2px}
+.svc b{font-size:16.5px;font-weight:600;color:var(--white)}
+.svc span{font-size:14.5px;color:rgba(247,245,240,.75);line-height:1.55}
+.dest{margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px}
+.dest .lbl{font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sand);margin-right:6px}
+:root[data-lang="ja"] .dest .lbl{letter-spacing:.08em}
+.dest .chip{border-color:rgba(230,214,184,.45);color:var(--ivory)}
+.dest .chip.more{border-style:dashed}
+
+.prog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start}
+.prog{background:var(--white);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.prog figure{margin:0;position:relative;aspect-ratio:16/10;background:var(--sand-2)}
+.prog figure img{width:100%;height:100%;object-fit:cover}
+.prog .aud{position:absolute;left:14px;top:12px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--white);background:rgba(16,39,44,.78);padding:5px 10px;border-radius:999px}
+:root[data-lang="ja"] .prog .aud{letter-spacing:.04em}
+.prog-body{padding:24px 24px 26px;display:grid;gap:12px}
+.prog .len{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--focus)}
+:root[data-lang="ja"] .prog .len{letter-spacing:.04em}
+.prog h3{font-family:var(--serif);font-size:25px;line-height:1.18;color:var(--teal)}
+:root[data-lang="ja"] .prog h3{font-family:var(--jp);font-weight:700;font-size:19px;line-height:1.5}
+.prog .desc{font-size:15px;color:var(--ink-soft);line-height:1.55}
+.prog .hl{display:grid;gap:8px;margin:2px 0 4px}
+.prog .hl li{display:flex;gap:10px;font-size:14.5px;line-height:1.45}
+.prog .hl svg{flex:none;width:16px;height:16px;margin-top:3px;color:var(--teal)}
+.prog .price-row{border-top:1px solid var(--line);padding-top:16px;display:grid;gap:2px}
+.prog .from{font-size:13px;color:var(--ink-soft)}
+.prog .amt{font-family:var(--serif);font-size:38px;line-height:1.05;color:var(--teal)}
+.prog .per{font-size:13.5px;color:var(--ink-soft)}
+.prog details{border-top:1px solid var(--line);padding-top:12px}
+.prog summary{cursor:pointer;font-weight:600;font-size:15px;color:var(--teal);min-height:44px;display:flex;align-items:center;list-style:none}
+.prog summary::-webkit-details-marker{display:none}
+.prog summary::after{content:"+";margin-left:auto;width:28px;height:28px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:400}
+.prog details[open] summary::after{content:"−"}
+.prog ol{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:8px}
+.prog ol li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:8px;font-size:14.5px;line-height:1.5}
+.prog ol li b{color:var(--teal);font-weight:600}
+.price-notes{margin-top:36px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+
+.how-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:h}
+.how-steps li{counter-increment:h;border-top:2px solid var(--teal);padding-top:18px;display:grid;gap:8px;align-content:start}
+.how-steps li::before{content:"0" counter(h);font-family:var(--serif);font-size:34px;line-height:1;color:var(--teal)}
+.how-steps b{font-size:17px;color:var(--teal);font-weight:600}
+.how-steps span{font-size:15px;color:var(--ink-soft);line-height:1.55}
+
+.checks{display:flex;flex-wrap:wrap;gap:8px}
+.checks label{position:relative;cursor:pointer}
+.checks input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.checks label > span{display:inline-flex;align-items:center;min-height:40px;padding:6px 14px;border:1px solid #CFC6B4;border-radius:999px;background:var(--white);font-size:14.5px}
+.checks input:checked + span{background:var(--teal);border-color:var(--teal);color:var(--white)}
+.checks input:focus-visible + span{outline:3px solid var(--focus);outline-offset:2px}
+fieldset.field{border:0;margin:0;padding:0;min-width:0}
+fieldset.field legend{font-size:14px;font-weight:600;padding:0;margin-bottom:8px}
+
+@media (max-width:1100px){.why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.prog-grid{grid-template-columns:1fr 1fr}.how-steps{grid-template-columns:1fr 1fr}}
+@media (max-width:1000px){.svc-grid{grid-template-columns:1fr 1fr}.svc,.svc:nth-child(3n+2),.svc:nth-child(3n){padding:22px 16px 22px 0;border-left:0}.svc:nth-child(2n){padding-left:16px;border-left:1px solid rgba(230,214,184,.18)}.price-notes{grid-template-columns:1fr}}
+@media (max-width:700px){.why-grid,.prog-grid,.how-steps,.svc-grid{grid-template-columns:1fr}.svc:nth-child(2n){padding-left:0;border-left:0}}
 </style>
 </head>
 <body>
@@ -351,16 +424,16 @@ button[aria-busy="true"]{opacity:.7;cursor:progress}
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Japan Education Journey by raise your flag, back to top"><img src="assets/logo.png" width="600" height="217" alt="raise your flag"><span class="div" aria-hidden="true"></span><span class="name">Japan Education Journey</span></a>
     <nav class="nav" aria-label="Main">
-      <a class="link" href="#explore"><span class="en">What You'll Do</span><span class="ja">何をするか</span></a>
-      <a class="link" href="#schools"><span class="en">Schools</span><span class="ja">訪問校</span></a>
-      <a class="link" href="#schedule"><span class="en">Schedule</span><span class="ja">スケジュール</span></a>
-      <a class="link" href="#price"><span class="en">Price</span><span class="ja">参加費</span></a>
-      <a class="link" href="#faq"><span class="en">FAQ</span><span class="ja">よくある質問</span></a>
+      <a class="link" href="#why"><span class="en">Why Us</span><span class="ja">強み</span></a>
+      <a class="link" href="#services"><span class="en">What We Arrange</span><span class="ja">手配内容</span></a>
+      <a class="link" href="#programmes"><span class="en">Sample Programmes</span><span class="ja">プラン例</span></a>
+      <a class="link" href="#how"><span class="en">How It Works</span><span class="ja">ご依頼の流れ</span></a>
+      <a class="link" href="#faq">FAQ</a>
       <div class="lang" role="group" aria-label="Language">
         <button type="button" id="lang-en" data-set-lang="en" aria-pressed="true">EN</button>
         <button type="button" id="lang-ja" data-set-lang="ja" aria-pressed="false">JP</button>
       </div>
-      <a class="btn btn-primary" href="#register"><span class="en">Register Your Interest</span><span class="ja">参加希望を登録する</span></a>
+      <a class="btn btn-primary" href="#enquire"><span class="en">Request a Proposal</span><span class="ja">プランの相談・見積もり依頼</span></a>
     </nav>
   </div>
 </header>
@@ -371,272 +444,209 @@ button[aria-busy="true"]{opacity:.7;cursor:progress}
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-media"><img src="assets/hero.webp" width="1800" height="1202" alt="Visiting educators talking with a teacher in a bright school hallway" fetchpriority="high"></div>
   <div class="wrap">
-    <p class="eyebrow"><span class="en">See education differently · 7 days in Japan</span><span class="ja">教育の見方が変わる、日本での7日間</span></p>
-    <h1 id="hero-title"><span class="en">What If 7 Days in Japan Could Change the Way You Teach?</span><span class="ja">日本での7日間が、<br>あなたの授業を変えるとしたら？</span></h1>
-    <p class="sub"><span class="en">7 Days. 2 Schools. A New Perspective on Education.</span><span class="ja">7日間、2つの学校、教育への新しい視点。</span></p>
-    <p class="body"><span class="en">Step inside Japanese classrooms. Connect with local educators. Return home with fresh ideas for your own classroom.</span><span class="ja">日本の教室に入り、現地の先生と対話する。新しいアイデアを、あなたの教室へ持ち帰る旅です。</span></p>
+    <p class="eyebrow"><span class="en">For travel agencies and tour operators</span><span class="ja">旅行会社・ツアーオペレーターの皆さまへ</span></p>
+    <h1 id="hero-title"><span class="en">Japanese School Visits, Built Around Your Groups.</span><span class="ja">日本の学校訪問を軸に、<br>お客様に合わせた旅を。</span></h1>
+    <p class="sub"><span class="en">Custom educational tours to Japan for students and educators.</span><span class="ja">生徒・先生・教育関係者向けの、オーダーメイド教育旅行。</span></p>
+    <p class="body"><span class="en">Tell us what your clients want. We arrange school visits, student exchange, travel and culture across Tokyo, Kyoto, Osaka and beyond.</span><span class="ja">お客様のご希望をお聞かせください。学校訪問や生徒交流から、移動・宿泊・文化体験まで、東京・京都・大阪をはじめ各地で手配します。</span></p>
     <div class="ctas">
-      <a class="btn btn-light" href="#register"><span class="en">Register Your Interest</span><span class="ja">参加希望を登録する</span></a>
-      <a class="btn btn-ghost" href="#explore"><span class="en">Explore the Journey</span><span class="ja">プログラムを見る</span></a>
+      <a class="btn btn-light" href="#enquire"><span class="en">Request a Proposal</span><span class="ja">プランの相談・見積もり依頼</span></a>
+      <a class="btn btn-ghost" href="#programmes"><span class="en">See Sample Programmes</span><span class="ja">プラン例を見る</span></a>
     </div>
-    <p class="reassure"><span class="en">Free to register · No payment required at this stage</span><span class="ja">登録は無料・この段階でのお支払いはありません</span></p>
-    <ul class="highlights" aria-label="Program highlights">
-      <li><span class="en">2 schools in Tokyo (1 confirmed, 1 to be announced)</span><span class="ja">東京の学校2校（1校確定・1校調整中）</span></li>
-      <li><span class="en">Tokyo · Kyoto · Osaka</span><span class="ja">東京・京都・大阪</span></li>
-      <li><span class="en">7 Days in Japan</span><span class="ja">日本で7日間</span></li>
-      <li><span class="en">Small group of up to 20</span><span class="ja">定員20名の少人数制</span></li>
+    <p class="reassure"><span class="en">Free proposals · Fully customisable</span><span class="ja">ご提案・お見積もりは無料・内容は自由にカスタマイズ</span></p>
+    <ul class="highlights" aria-label="Highlights">
+      <li><span class="en">Japanese school visits and student exchange</span><span class="ja">日本の学校訪問・生徒交流</span></li>
+      <li><span class="en">Tokyo · Kyoto · Osaka and more</span><span class="ja">東京・京都・大阪ほか</span></li>
+      <li><span class="en">For student and educator groups</span><span class="ja">生徒・教育者のグループ向け</span></li>
+      <li><span class="en">Programmes built to your brief</span><span class="ja">ご要望に合わせて企画</span></li>
     </ul>
   </div>
   <span class="ph-credit"><span class="en">Illustrative photo</span><span class="ja">イメージ写真</span></span>
 </section>
 
-<!-- ABOUT -->
-<section id="about" aria-labelledby="about-title">
-  <div class="wrap about-grid">
-    <div class="copy">
-      <p class="eyebrow"><span class="en">About the program</span><span class="ja">プログラムについて</span></p>
-      <h2 id="about-title" class="h2"><span class="en">Great Teaching Begins with Curiosity.</span><span class="ja">教育の可能性は、いつもと違う視点から広がる。</span></h2>
-      <p class="lede"><span class="en">Some of the most valuable insights come from stepping outside our own classrooms. Observe, ask questions and exchange ideas with educators in Japan.</span><span class="ja">異なる教育の現場を見ることで、新しい気づきが生まれます。日本の学校を訪れ、自分の目で見て、先生たちと対話します。</span></p>
-      <p class="about-quote"><span class="en">You don't need to leave with all the answers. Leave with new perspectives and ideas to try.</span><span class="ja">すべての答えを見つける必要はありません。新しい視点と、試してみたいアイデアを持ち帰る旅です。</span></p>
-    </div>
-    <figure class="about-photo"><img loading="lazy" decoding="async" src="assets/visitmap.webp" width="900" height="675" alt="Educators looking at a world map in a school corridor"><figcaption class="ph-credit"><span class="en">Illustrative photo</span><span class="ja">イメージ写真</span></figcaption></figure>
-  </div>
-</section>
-
-<!-- WHAT YOU'LL DO -->
-<section class="explore" id="explore" aria-labelledby="explore-title">
+<!-- WHY -->
+<section id="why" aria-labelledby="why-title">
   <div class="wrap">
     <div class="head">
       <div>
-        <p class="eyebrow"><span class="en">What you'll do</span><span class="ja">何をするか</span></p>
-        <h2 id="explore-title" class="h2"><span class="en">Go Beyond What You Know.</span><span class="ja">日本の学校から学ぶ、5つの視点</span></h2>
+        <p class="eyebrow"><span class="en">Why partner with us</span><span class="ja">私たちと組む理由</span></p>
+        <h2 id="why-title" class="h2"><span class="en">Real Japanese Schools. Your Itinerary.</span><span class="ja">本物の日本の学校を、あなたの旅程に。</span></h2>
       </div>
-      <p class="lede"><span class="en">Five perspectives to explore in Japanese schools.</span><span class="ja">学校訪問では、5つのテーマを軸に観察と対話を行います。</span></p>
+      <p class="lede"><span class="en">Access to Japanese schools is hard to arrange from overseas. We make it part of your tour.</span><span class="ja">日本の学校訪問は、海外から手配するのが難しいものです。私たちがツアーに組み込みます。</span></p>
     </div>
-    <ul class="themes">
-      <li class="theme">
-        <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="6" width="28" height="18" rx="1"/><path d="M12 30h12M18 24v6M9 12h10M9 17h14"/></svg>
-        <span class="tn">01</span>
-        <h3><span class="en">Teaching &amp; Learning</span><span class="ja">授業・学習方法</span></h3>
-        <p><span class="en">Observe lessons and how teachers guide learning.</span><span class="ja">授業を見学し、先生の教え方を知る。</span></p>
-      </li>
-      <li class="theme">
-        <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><circle cx="25" cy="13" r="3.5"/><path d="M4 29c0-4.4 3.6-8 8-8s8 3.6 8 8M21 21.5c4.2 0 8 2.6 8 7.5"/></svg>
-        <span class="tn">02</span>
-        <h3><span class="en">School Culture</span><span class="ja">生徒指導・学校文化</span></h3>
-        <p><span class="en">See how routines and shared roles shape school life.</span><span class="ja">日々の習慣や役割分担が育てるもの。</span></p>
-      </li>
-      <li class="theme">
-        <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 32V5M8 6h18l-4 6 4 6H8"/></svg>
-        <span class="tn">03</span>
-        <h3><span class="en">Beyond the Classroom</span><span class="ja">特別活動・学校行事</span></h3>
-        <p><span class="en">Learn the role of school activities and events.</span><span class="ja">行事や学級活動の役割を知る。</span></p>
-      </li>
-      <li class="theme">
-        <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 31h26M8 31V14l10-7 10 7v17M14 31v-8h8v8"/></svg>
-        <span class="tn">04</span>
-        <h3><span class="en">Leadership &amp; Systems</span><span class="ja">学校経営・教育制度</span></h3>
-        <p><span class="en">Look at the structures and values behind schools.</span><span class="ja">学校を支える仕組みと価値観。</span></p>
-      </li>
-      <li class="theme">
-        <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="16" cy="16" r="9"/><path d="M23 23l8 8M13.5 13a3 3 0 1 1 3.5 3c-1 .3-1 1-1 2M16 21v.5"/></svg>
-        <span class="tn">05</span>
-        <h3><span class="en">Inquiry &amp; Agency</span><span class="ja">探究学習・主体的な学び</span></h3>
-        <p><span class="en">Explore how students ask and own their questions.</span><span class="ja">子どもが自ら問いを立てる工夫。</span></p>
-      </li>
-    </ul>
-    <p class="closing"><span class="en">Every school is different. We learn through observation, conversation and reflection — not by looking for one perfect model.</span><span class="ja">日本の教育を理想化するのではなく、観察・対話・振り返りを通じて学びます。</span></p>
-    <p class="note"><span class="en">Topics you can observe depend on arrangements with each school.</span><span class="ja">実際に見学・体験できるテーマは、訪問校との調整後に確定します。</span></p>
-    <div class="cta-row"><a class="btn btn-light" href="#register"><span class="en">Register Your Interest</span><span class="ja">参加希望を登録する</span></a><p class="note"><span class="en">Free · No payment at this stage</span><span class="ja">無料・この段階でのお支払いはありません</span></p></div>
+    <div class="why-grid">
+      <article class="why"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-5 9 5-9 5-9-5z"/><path d="M7 12.5V17c0 1.5 2.5 3 5 3s5-1.5 5-3v-4.5"/></svg></span><h3><span class="en">Access to Japanese schools</span><span class="ja">日本の学校とのつながり</span></h3><p><span class="en">Lesson observation and school life at partner schools, starting with Jiyu Gakuen in Tokyo.</span><span class="ja">東京の自由学園をはじめ、提携校で授業見学や学校生活の体験ができます。</span></p></article>
+      <article class="why"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h12v8H8l-4 3v-3H3zM15 9h6v8h-1v3l-4-3h-3v-3"/></svg></span><h3><span class="en">Student exchange</span><span class="ja">生徒同士の交流</span></h3><p><span class="en">Your students can join lessons and spend time with Japanese students.</span><span class="ja">お客様の生徒が授業に参加し、日本の生徒と交流できます。</span></p></article>
+      <article class="why"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6v2a2 2 0 1 0 4 0V4h6v6h-2a2 2 0 1 0 0 4h2v6h-6v-2a2 2 0 1 0-4 0v2H4z"/></svg></span><h3><span class="en">Built to your brief</span><span class="ja">ご要望に合わせて企画</span></h3><p><span class="en">Destinations, length, content and budget are all up to you and your clients.</span><span class="ja">行き先、日数、内容、予算はすべてご要望に合わせます。</span></p></article>
+      <article class="why"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 5h12l-3 4 3 4H5"/></svg></span><h3><span class="en">Education travel specialists</span><span class="ja">教育旅行の専門チーム</span></h3><p><span class="en">We already run Edu-tabi school study tours to six countries.</span><span class="ja">すでに「Edu旅」で6か国の学校を訪ねる研修旅行を運営しています。</span></p></article>
+    </div>
   </div>
 </section>
 
-<!-- SCHOOLS -->
+<!-- SERVICES -->
+<section class="services" id="services" aria-labelledby="svc-title">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow"><span class="en">What we arrange</span><span class="ja">手配できること</span></p>
+        <h2 id="svc-title" class="h2"><span class="en">Everything on the Ground in Japan</span><span class="ja">日本国内の手配をまとめて</span></h2>
+      </div>
+      <p class="lede"><span class="en">Choose what you need. We can handle the whole trip or just the school days.</span><span class="ja">必要なものだけを選べます。旅全体の手配も、学校訪問の日だけの手配も可能です。</span></p>
+    </div>
+    <ul class="svc-grid" style="list-style:none;margin:0;padding:0">
+      <li class="svc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-5 9 5-9 5-9-5z"/><path d="M7 12.5V17c0 1.5 2.5 3 5 3s5-1.5 5-3v-4.5"/></svg><b><span class="en">School visits</span><span class="ja">学校訪問</span></b><span><span class="en">Lesson observation, campus tours and time with teachers.</span><span class="ja">授業見学、校内見学、先生との対話。</span></span></li>
+      <li class="svc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.6"/><path d="M2.5 20c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5M14.5 14.8c3.4 0 6 1.9 6 5.2"/></svg><b><span class="en">Student exchange</span><span class="ja">生徒交流</span></b><span><span class="en">Joining lessons and exchange sessions with Japanese students.</span><span class="ja">授業参加や、日本の生徒との交流会。</span></span></li>
+      <li class="svc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h12v8H8l-4 3v-3H3zM15 9h6v8h-1v3l-4-3h-3v-3"/></svg><b><span class="en">Workshops for educators</span><span class="ja">教育者向けワークショップ</span></b><span><span class="en">Orientation and facilitated reflection sessions.</span><span class="ja">オリエンテーションと、ファシリテーター付きの振り返り。</span></span></li>
+      <li class="svc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V7M3 14h18v4M21 14v-3a3 3 0 0 0-3-3h-8v6"/><circle cx="6.5" cy="10.5" r="1.8"/></svg><b><span class="en">Accommodation</span><span class="ja">宿泊</span></b><span><span class="en">Hotels chosen for group size and budget.</span><span class="ja">人数と予算に合ったホテル。</span></span></li>
+      <li class="svc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="13" rx="4"/><path d="M5 10h14M8.5 13h.01M15.5 13h.01M8 16l-2 4M16 16l2 4"/></svg><b><span class="en">Transport</span><span class="ja">移動</span></b><span><span class="en">Airport transfers, bullet train, coaches and local transport.</span><span class="ja">空港送迎、新幹線、貸切バス、市内交通。</span></span></li>
+      <li class="svc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h13v4a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H16M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg><b><span class="en">Culture and sightseeing</span><span class="ja">文化体験・観光</span></b><span><span class="en">Tea ceremony, temples, crafts and city tours.</span><span class="ja">茶道、寺社、伝統工芸、市内観光など。</span></span></li>
+      <li class="svc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v7a2 2 0 0 0 2 2M11 3v7a2 2 0 0 1-2 2v9M16 21V3c2 1 3 4 3 8h-3"/></svg><b><span class="en">Meals</span><span class="ja">食事</span></b><span><span class="en">Group meals, including dietary requirements.</span><span class="ja">食事制限にも配慮した団体での食事。</span></span></li>
+      <li class="svc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3.5"/><path d="M5 21c0-4 3-6.5 7-6.5s7 2.5 7 6.5"/></svg><b><span class="en">English-speaking guides</span><span class="ja">英語ガイド</span></b><span><span class="en">A guide and facilitator who travels with your group.</span><span class="ja">グループに同行するガイド兼ファシリテーター。</span></span></li>
+      <li class="svc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 5h12l-3 4 3 4H5"/></svg><b><span class="en">Planning and support</span><span class="ja">企画・サポート</span></b><span><span class="en">Itinerary design, quotes and support during the trip.</span><span class="ja">行程の企画、お見積もり、旅行中のサポート。</span></span></li>
+    </ul>
+    <div class="dest">
+      <span class="lbl"><span class="en">Destinations</span><span class="ja">行き先</span></span>
+      <span class="chip"><span class="en">Tokyo</span><span class="ja">東京</span></span><span class="chip"><span class="en">Kyoto</span><span class="ja">京都</span></span><span class="chip"><span class="en">Osaka</span><span class="ja">大阪</span></span>
+      <span class="chip more"><span class="en">Other regions on request</span><span class="ja">その他の地域もご相談ください</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER SCHOOL -->
 <section id="schools" aria-labelledby="schools-title">
   <div class="wrap">
     <div class="head">
       <div>
-        <p class="eyebrow"><span class="en">The schools</span><span class="ja">訪問する学校</span></p>
-        <h2 id="schools-title" class="h2"><span class="en">Two Schools in Tokyo</span><span class="ja">東京の2つの学校</span></h2>
+        <p class="eyebrow"><span class="en">Partner school</span><span class="ja">提携校</span></p>
+        <h2 id="schools-title" class="h2"><span class="en">Jiyu Gakuen, Tokyo</span><span class="ja">東京・自由学園</span></h2>
       </div>
-      <p class="lede"><span class="en">One day at each school, so you can compare what you see.</span><span class="ja">1校につき1日。2校を比べながら学びます。</span></p>
+      <p class="lede"><span class="en">More partner schools are being added. Visits are arranged with each school, based on dates and availability.</span><span class="ja">提携校は順次増やしています。訪問は日程と各校の都合に合わせて調整します。</span></p>
     </div>
     <div class="school-grid">
       <article class="school">
-        <figure class="school-photo"><img loading="lazy" decoding="async" src="assets/jiyu_campus.webp" width="1200" height="600" alt="Students walking along a tree-lined path on the Jiyu Gakuen campus"><span class="tag">Day 2 · School 1</span><figcaption class="ph-credit"><span class="en">Photo: Jiyu Gakuen</span><span class="ja">写真：自由学園</span></figcaption></figure>
+        <figure class="school-photo"><img loading="lazy" decoding="async" src="assets/jiyu_campus.webp" width="1200" height="600" alt="Students walking along a tree-lined path on the Jiyu Gakuen campus"><figcaption class="ph-credit"><span class="en">Photo: Jiyu Gakuen</span><span class="ja">写真：自由学園</span></figcaption></figure>
         <div class="school-body">
           <h3><span class="en">Jiyu Gakuen</span><span class="ja">自由学園</span></h3>
           <p class="meta"><span class="en">Higashikurume, Tokyo · Private · Founded 1921</span><span class="ja">東京都東久留米市｜私立・1921年創立</span></p>
-          <p class="note" style="font-size:15.5px"><span class="en">Known for the idea that daily life itself is education. Students help run school life.</span><span class="ja">「生活即教育」を理念に、生徒が学校生活の運営に関わる教育で知られています。</span></p>
+          <p class="note" style="font-size:15.5px"><span class="en">Known for the idea that daily life itself is education. Students help run school life, from meals to growing food.</span><span class="ja">「生活即教育」を理念に、食事づくりや作物の栽培など、生徒が学校生活の運営に関わる教育で知られています。</span></p>
           <a class="school-link" href="https://www.jiyu.ac.jp/" target="_blank" rel="noopener noreferrer"><span class="en">School website</span><span class="ja">学校のホームページ</span><span aria-hidden="true">↗</span><span class="vh"><span class="en"> (opens in a new tab)</span><span class="ja">（新しいタブで開きます）</span></span></a>
         </div>
       </article>
-      <article class="school tbc">
-        <div class="plate" aria-hidden="true"><span class="tag">Day 3 · School 2</span><span class="kanji" style="font-size:clamp(26px,2.8vw,36px);letter-spacing:.04em"><span class="en">To be announced</span><span class="ja">調整中</span></span></div>
-        <div class="school-body">
-          <h3><span class="en">School 2</span><span class="ja">2校目</span></h3>
-          <p class="meta"><span class="en">Tokyo · Details to follow</span><span class="ja">東京都｜詳細は後日公開</span></p>
-          <p class="note" style="font-size:15.5px"><span class="en">The school's name, profile and website will be added once confirmed.</span><span class="ja">学校名・紹介・ホームページは、確定後に掲載します。</span></p>
+      <div class="jiyu-gallery" style="margin-top:0;grid-template-columns:1fr 1fr;align-content:start">
+        <figure style="aspect-ratio:4/3"><img loading="lazy" decoding="async" src="assets/jiyu_lesson.webp" width="1100" height="733" alt="Two Jiyu Gakuen students examining a sample under a microscope"><figcaption class="ph-credit"><span class="en">Photo: Jiyu Gakuen</span><span class="ja">写真：自由学園</span></figcaption></figure>
+        <figure style="aspect-ratio:4/3"><img loading="lazy" decoding="async" src="assets/jiyu_harvest.webp" width="800" height="800" alt="Jiyu Gakuen students holding bundles of rice they harvested"><figcaption class="ph-credit"><span class="en">Photo: Jiyu Gakuen</span><span class="ja">写真：自由学園</span></figcaption></figure>
+        <figure style="aspect-ratio:auto;grid-column:1 / -1;aspect-ratio:2.03/1"><img loading="lazy" decoding="async" src="assets/jiyu_class.webp" width="1100" height="543" alt="A student thinking during a lesson in a wooden classroom at Jiyu Gakuen"><figcaption class="ph-credit"><span class="en">Photo: Jiyu Gakuen</span><span class="ja">写真：自由学園</span></figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMMES -->
+<section class="schedule" id="programmes" aria-labelledby="prog-title">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow"><span class="en">Sample programmes</span><span class="ja">プラン例</span></p>
+        <h2 id="prog-title" class="h2"><span class="en">Start From a Sample, Make It Yours.</span><span class="ja">プラン例をもとに、自由にアレンジ。</span></h2>
+      </div>
+      <p class="lede"><span class="en">Three examples of what we can build. Every element can be changed.</span><span class="ja">手配できる内容の例を3つ紹介します。どの要素も変更できます。</span></p>
+    </div>
+    <div class="prog-grid">
+      <article class="prog">
+        <figure><img loading="lazy" decoding="async" src="assets/kyoto.webp" width="540" height="360" alt="A stone-paved street in Kyoto with a five-storey pagoda"><span class="aud"><span class="en">Students</span><span class="ja">生徒向け</span></span></figure>
+        <div class="prog-body">
+          <span class="len"><span class="en">6 days · Tokyo & Kyoto</span><span class="ja">6日間｜東京・京都</span></span>
+          <h3><span class="en">Student School Exchange</span><span class="ja">生徒の学校交流プログラム</span></h3>
+          <p class="desc"><span class="en">A day at a Japanese school with lessons and exchange, plus Tokyo and Kyoto.</span><span class="ja">日本の学校で授業参加と交流をする1日に、東京・京都の観光を組み合わせます。</span></p>
+          <ul class="hl">
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><span class="en">A school day with Japanese students</span><span class="ja">日本の生徒と過ごす学校での1日</span></span></li>
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><span class="en">Bullet train to Kyoto</span><span class="ja">新幹線で京都へ</span></span></li>
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><span class="en">Tea ceremony or craft workshop</span><span class="ja">茶道や伝統工芸の体験</span></span></li>
+          </ul>
+          <div class="price-row"><span class="from"><span class="en">Guide price from</span><span class="ja">目安価格</span></span><span class="amt">US$2,800</span><span class="per"><span class="en">per person, based on 20 participants</span><span class="ja">1名あたり（20名の場合）</span></span></div>
+          <details><summary><span class="en">See sample itinerary</span><span class="ja">行程例を見る</span></summary>
+            <ol>
+              <li><b>Day 1</b><span><span class="en">Arrive in Tokyo, airport transfer, welcome dinner</span><span class="ja">東京到着、空港送迎、歓迎の夕食</span></span></li>
+              <li><b>Day 2</b><span><span class="en">School exchange day: join lessons and meet Japanese students</span><span class="ja">学校交流の日：授業に参加し、日本の生徒と交流</span></span></li>
+              <li><b>Day 3</b><span><span class="en">Tokyo sightseeing</span><span class="ja">東京観光</span></span></li>
+              <li><b>Day 4</b><span><span class="en">Bullet train to Kyoto, temples</span><span class="ja">新幹線で京都へ、寺社めぐり</span></span></li>
+              <li><b>Day 5</b><span><span class="en">Cultural experience in Kyoto</span><span class="ja">京都で文化体験</span></span></li>
+              <li><b>Day 6</b><span><span class="en">Depart from Kansai International Airport</span><span class="ja">関西国際空港から帰国</span></span></li>
+            </ol>
+          </details>
+        </div>
+      </article>
+      <article class="prog">
+        <figure><img loading="lazy" decoding="async" src="assets/dialogue.webp" width="900" height="601" alt="Visiting educators talking with teachers around a table"><span class="aud"><span class="en">Educators</span><span class="ja">先生・教育関係者向け</span></span></figure>
+        <div class="prog-body">
+          <span class="len"><span class="en">7 days · Tokyo, Kyoto & Osaka</span><span class="ja">7日間｜東京・京都・大阪</span></span>
+          <h3><span class="en">Educator Study Tour</span><span class="ja">教育者の視察・研修ツアー</span></h3>
+          <p class="desc"><span class="en">Two school visits and conversations with Japanese teachers, with time to reflect.</span><span class="ja">2校の学校訪問と日本の先生との対話に、振り返りの時間を組み合わせます。</span></p>
+          <ul class="hl">
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><span class="en">Two school visits in Tokyo</span><span class="ja">東京で2校を訪問</span></span></li>
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><span class="en">Facilitated reflection workshop</span><span class="ja">ファシリテーター付きの振り返りワークショップ</span></span></li>
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><span class="en">Culture in Kyoto and Osaka</span><span class="ja">京都・大阪で文化体験</span></span></li>
+          </ul>
+          <div class="price-row"><span class="from"><span class="en">Guide price from</span><span class="ja">目安価格</span></span><span class="amt">US$3,500</span><span class="per"><span class="en">per person, based on 20 participants</span><span class="ja">1名あたり（20名の場合）</span></span></div>
+          <details><summary><span class="en">See sample itinerary</span><span class="ja">行程例を見る</span></summary>
+            <ol>
+              <li><b>Day 1</b><span><span class="en">Arrive in Tokyo, orientation, welcome dinner</span><span class="ja">東京到着、オリエンテーション、歓迎の夕食</span></span></li>
+              <li><b>Day 2</b><span><span class="en">School visit 1: lessons and school life</span><span class="ja">学校訪問①：授業と学校生活</span></span></li>
+              <li><b>Day 3</b><span><span class="en">School visit 2 and reflection workshop</span><span class="ja">学校訪問②と振り返りワークショップ</span></span></li>
+              <li><b>Day 4</b><span><span class="en">Tokyo, then bullet train to Kyoto</span><span class="ja">東京観光の後、新幹線で京都へ</span></span></li>
+              <li><b>Day 5</b><span><span class="en">Kyoto and tea ceremony</span><span class="ja">京都観光と茶道体験</span></span></li>
+              <li><b>Day 6</b><span><span class="en">Fushimi Inari, on to Osaka, farewell dinner</span><span class="ja">伏見稲荷から大阪へ、送別の夕食</span></span></li>
+              <li><b>Day 7</b><span><span class="en">Depart from Kansai International Airport</span><span class="ja">関西国際空港から帰国</span></span></li>
+            </ol>
+          </details>
+        </div>
+      </article>
+      <article class="prog">
+        <figure><img loading="lazy" decoding="async" src="assets/tokyo.webp" width="540" height="360" alt="Tokyo skyline with Tokyo Tower"><span class="aud"><span class="en">Students or educators</span><span class="ja">生徒・先生どちらも</span></span></figure>
+        <div class="prog-body">
+          <span class="len"><span class="en">4 days · Tokyo</span><span class="ja">4日間｜東京</span></span>
+          <h3><span class="en">Tokyo School Visit Short Stay</span><span class="ja">東京・学校訪問ショートプラン</span></h3>
+          <p class="desc"><span class="en">A short add-on to an existing Japan tour: one school day and the best of Tokyo.</span><span class="ja">既存の日本ツアーに追加しやすい短期プラン。学校訪問1日と東京観光。</span></p>
+          <ul class="hl">
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><span class="en">One school visit or exchange day</span><span class="ja">学校訪問または交流の1日</span></span></li>
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><span class="en">Tokyo city sightseeing</span><span class="ja">東京の市内観光</span></span></li>
+            <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><span class="en">Easy to add to a longer tour</span><span class="ja">長めのツアーにも組み込みやすい</span></span></li>
+          </ul>
+          <div class="price-row"><span class="from"><span class="en">Guide price from</span><span class="ja">目安価格</span></span><span class="amt">US$1,700</span><span class="per"><span class="en">per person, based on 20 participants</span><span class="ja">1名あたり（20名の場合）</span></span></div>
+          <details><summary><span class="en">See sample itinerary</span><span class="ja">行程例を見る</span></summary>
+            <ol>
+              <li><b>Day 1</b><span><span class="en">Arrive in Tokyo, airport transfer</span><span class="ja">東京到着、空港送迎</span></span></li>
+              <li><b>Day 2</b><span><span class="en">School visit or exchange day</span><span class="ja">学校訪問または交流の日</span></span></li>
+              <li><b>Day 3</b><span><span class="en">Tokyo sightseeing</span><span class="ja">東京観光</span></span></li>
+              <li><b>Day 4</b><span><span class="en">Depart, or continue your tour</span><span class="ja">帰国、または次の行程へ</span></span></li>
+            </ol>
+          </details>
         </div>
       </article>
     </div>
-    <div class="jiyu-gallery">
-      <figure><img loading="lazy" decoding="async" src="assets/jiyu_class.webp" width="1100" height="543" alt="A student thinking during a lesson in a wooden classroom at Jiyu Gakuen"><figcaption class="ph-credit"><span class="en">Photo: Jiyu Gakuen</span><span class="ja">写真：自由学園</span></figcaption></figure>
-      <figure><img loading="lazy" decoding="async" src="assets/jiyu_harvest.webp" width="800" height="800" alt="Jiyu Gakuen students holding bundles of rice they harvested"><figcaption class="ph-credit"><span class="en">Photo: Jiyu Gakuen</span><span class="ja">写真：自由学園</span></figcaption></figure>
-      <p class="note"><span class="en">Scenes from Jiyu Gakuen, where students take part in running daily school life, from meals to growing food.</span><span class="ja">自由学園の様子。食事づくりや作物の栽培など、生徒が学校生活の運営に関わっています。</span></p>
+    <div class="price-notes terms">
+      <div class="term"><b><span class="en">Included in guide prices</span><span class="ja">目安価格に含まれるもの</span></b><span><span class="en">Hotels (twin share), daily breakfast, lunch and dinner, airport transfers, transport in Japan, English-speaking guide, school visit arrangements, admissions and cultural experiences.</span><span class="ja">ホテル（2名1室）、毎日の朝食・昼食・夕食、空港送迎、日本国内の移動、英語ガイド、学校訪問の手配、拝観料・入場料、文化体験。</span></span></div>
+      <div class="term"><b><span class="en">Not included</span><span class="ja">含まれないもの</span></b><span><span class="en">International flights, travel insurance, visa fees and personal expenses.</span><span class="ja">国際線航空券、海外旅行保険、ビザ費用、個人的な支出。</span></span></div>
+      <div class="term"><b><span class="en">About these prices</span><span class="ja">価格について</span></b><span><span class="en">Indicative retail prices per participant. Your quote depends on dates, group size and content. Partner terms are discussed individually.</span><span class="ja">参加者1名あたりの販売価格の目安です。日程・人数・内容によって変わります。旅行会社さまとの条件は個別にご相談します。</span></span></div>
     </div>
+    <div class="cta-row"><a class="btn btn-primary" href="#enquire"><span class="en">Request a Proposal</span><span class="ja">プランの相談・見積もり依頼</span></a><p class="note"><span class="en">Tell us your group and we will send a tailored proposal.</span><span class="ja">グループの内容を教えていただければ、合わせたプランをご提案します。</span></p></div>
   </div>
 </section>
 
-<!-- SCHEDULE -->
-<section class="schedule" id="schedule" aria-labelledby="schedule-title">
+<!-- HOW -->
+<section id="how" aria-labelledby="how-title">
   <div class="wrap">
     <div class="head">
       <div>
-        <p class="eyebrow"><span class="en">Schedule</span><span class="ja">スケジュール</span></p>
-        <h2 id="schedule-title" class="h2"><span class="en">Your 7-Day Journey Through Japan</span><span class="ja">日本を巡る、7日間の旅</span></h2>
+        <p class="eyebrow"><span class="en">How it works</span><span class="ja">ご依頼の流れ</span></p>
+        <h2 id="how-title" class="h2"><span class="en">From Brief to Departure</span><span class="ja">ご相談から出発まで</span></h2>
       </div>
-      <p class="lede"><span class="en">From Japanese classrooms to cultural discovery.</span><span class="ja">日本の教室から、文化の発見へ。</span></p>
     </div>
-    <ol class="days" style="list-style:none;margin:0;padding:0">
-      <li class="day">
-        <figure><img loading="lazy" decoding="async" src="assets/tokyo.webp" width="540" height="360" alt="Tokyo skyline with Tokyo Tower on a clear day"></figure>
-        <p class="chap"><span class="en">Arrive in Japan</span><span class="ja">新しい学びの旅が始まる</span></p>
-        <div class="label"><b>Day 1</b><span><span class="en">Tokyo</span><span class="ja">東京</span></span></div>
-        <h3><span class="en">Arrive in Tokyo</span><span class="ja">東京に到着</span></h3>
-        <p><span class="en">Meet your group and facilitator. An orientation sets the questions you will take into schools, followed by a welcome dinner.</span><span class="ja">参加者とファシリテーターが顔を合わせます。学校で考えたい問いをオリエンテーションで整理し、歓迎の夕食へ。</span></p>
-      </li>
-      <li class="day sv">
-        <figure><img loading="lazy" decoding="async" src="assets/jiyu_lesson.webp" width="1100" height="733" alt="Two Jiyu Gakuen students examining a sample under a microscope"><figcaption class="ph-credit"><span class="en">Photo: Jiyu Gakuen</span><span class="ja">写真：自由学園</span></figcaption></figure>
-        <p class="chap"><span class="en">Step inside Japanese classrooms</span><span class="ja">日本の教育現場に触れる</span></p>
-        <div class="label"><b>Day 2</b><span class="pill"><span class="en">School 1</span><span class="ja">学校訪問</span></span></div>
-        <h3><span class="en">Visit Japanese School 1</span><span class="ja">1校目を訪問</span></h3>
-        <p><span class="en">A day at Jiyu Gakuen. Observe lessons and see how students help run daily school life.</span><span class="ja">自由学園で1日を過ごします。授業を見学し、生徒が学校生活の運営に関わる様子を見ます。</span></p>
-      </li>
-      <li class="day sv">
-        <figure><img loading="lazy" decoding="async" src="assets/dialogue.webp" width="900" height="601" alt="Visiting educators talking with teachers around a table"><figcaption class="ph-credit"><span class="en">Illustrative</span><span class="ja">イメージ</span></figcaption></figure>
-        <p class="chap"><span class="en">Step inside Japanese classrooms</span><span class="ja">日本の教育現場に触れる</span></p>
-        <div class="label"><b>Day 3</b><span class="pill"><span class="en">School 2</span><span class="ja">学校訪問</span></span></div>
-        <h3><span class="en">Visit Japanese School 2</span><span class="ja">2校目を訪問</span></h3>
-        <p><span class="en">Visit a second Tokyo school (to be announced) and talk with teachers. A reflection workshop helps you compare what you saw.</span><span class="ja">東京の2校目（調整中）を訪れ、先生と対話します。午後は振り返りワークショップで2校を比べます。</span></p>
-      </li>
-      <li class="day">
-        <figure><img loading="lazy" decoding="async" src="assets/train.webp" width="466" height="360" alt="A Shinkansen bullet train passing Mount Fuji"></figure>
-        <p class="chap"><span class="en">Explore Japan</span><span class="ja">日本の文化を知る</span></p>
-        <div class="label"><b>Day 4</b><span><span class="en">Tokyo → Kyoto</span><span class="ja">東京 → 京都</span></span></div>
-        <h3><span class="en">Tokyo to Kyoto</span><span class="ja">東京から京都へ</span></h3>
-        <p><span class="en">Morning in Tokyo, then the bullet train west.</span><span class="ja">午前は東京観光、午後に新幹線で京都へ。</span></p>
-      </li>
-      <li class="day">
-        <figure><img loading="lazy" decoding="async" src="assets/kyoto.webp" width="540" height="360" alt="A stone-paved street in Kyoto with a five-storey pagoda at dusk"></figure>
-        <p class="chap"><span class="en">Explore Japan</span><span class="ja">日本の文化を知る</span></p>
-        <div class="label"><b>Day 5</b><span><span class="en">Kyoto</span><span class="ja">京都</span></span></div>
-        <h3><span class="en">Culture in Kyoto</span><span class="ja">京都で文化体験</span></h3>
-        <p><span class="en">Explore historic Kyoto and join a cultural experience such as a tea ceremony (planned).</span><span class="ja">歴史ある京都を歩き、茶道などの文化体験に参加します（予定）。</span></p>
-      </li>
-      <li class="day">
-        <figure><img loading="lazy" decoding="async" src="assets/osaka.webp" width="511" height="340" alt="Shinsekai street in Osaka with Tsutenkaku Tower"></figure>
-        <p class="chap"><span class="en">Reflect and reimagine</span><span class="ja">自分の実践を見つめ直す</span></p>
-        <div class="label"><b>Day 6</b><span><span class="en">Kyoto → Osaka</span><span class="ja">京都 → 大阪</span></span></div>
-        <h3><span class="en">On to Osaka</span><span class="ja">大阪へ</span></h3>
-        <p><span class="en">Look back on the week and decide what to try at your school. Then on to Osaka for a farewell dinner.</span><span class="ja">1週間を振り返り、自分の学校で試したいことを考えます。大阪へ移動し、送別の夕食。</span></p>
-      </li>
-      <li class="day">
-        <figure><img loading="lazy" decoding="async" src="assets/airport.webp" width="900" height="602" alt="Travellers with luggage in a bright airport terminal"><figcaption class="ph-credit"><span class="en">Illustrative</span><span class="ja">イメージ</span></figcaption></figure>
-        <p class="chap"><span class="en">Bring new ideas home</span><span class="ja">学びを持ち帰る</span></p>
-        <div class="label"><b>Day 7</b><span><span class="en">Osaka</span><span class="ja">大阪</span></span></div>
-        <h3><span class="en">Depart from Japan</span><span class="ja">帰国</span></h3>
-        <p><span class="en">Fly home from Kansai International Airport with new ideas for your classroom.</span><span class="ja">新しいアイデアを持って、関西国際空港から帰国します。</span></p>
-      </li>
-      <li class="day-note">
-        <strong><span class="en">Provisional itinerary</span><span class="ja">想定スケジュール</span></strong>
-        <p class="note"><span class="en">School visits, cultural activities, accommodation and transport are subject to confirmation.</span><span class="ja">学校訪問、文化体験、宿泊、交通手段などは今後の調整によって変更される可能性があります。</span></p>
-        <a class="btn btn-primary" href="#register"><span class="en">Register Your Interest</span><span class="ja">参加希望を登録する</span></a>
-      </li>
+    <ol class="how-steps">
+      <li><b><span class="en">Tell us about your group</span><span class="ja">グループについて教えてください</span></b><span><span class="en">Who is travelling, how many, when, and what they want to do.</span><span class="ja">参加者の層、人数、時期、やりたいこと。</span></span></li>
+      <li><b><span class="en">Receive a proposal</span><span class="ja">プランとお見積もりをお送りします</span></b><span><span class="en">We send a draft itinerary and a quote per person.</span><span class="ja">行程案と1名あたりのお見積もりをお送りします。</span></span></li>
+      <li><b><span class="en">Adjust together</span><span class="ja">一緒に調整します</span></b><span><span class="en">Change destinations, days or content until it fits.</span><span class="ja">行き先・日数・内容を、ご要望に合うまで調整します。</span></span></li>
+      <li><b><span class="en">We run it in Japan</span><span class="ja">日本での手配と運営</span></b><span><span class="en">We arrange everything and travel with your group.</span><span class="ja">すべて手配し、グループに同行します。</span></span></li>
     </ol>
-  </div>
-</section>
-
-<!-- TAKE HOME -->
-<section id="takehome" aria-labelledby="th-title">
-  <div class="wrap">
-    <div class="head">
-      <div>
-        <p class="eyebrow"><span class="en">What you'll gain</span><span class="ja">得られること</span></p>
-        <h2 id="th-title" class="h2"><span class="en">Bring a New Perspective Back to Your Classroom.</span><span class="ja">日本での経験を、あなたの教室へ。</span></h2>
-      </div>
-    </div>
-    <div class="gain-grid">
-      <article class="gain">
-        <span class="ico"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 13s4-7 11-7 11 7 11 7-4 7-11 7S2 13 2 13z"/><circle cx="13" cy="13" r="3.5"/></svg></span>
-        <h3><span class="en">See Real Japanese Education</span><span class="ja">日本の教育現場を自分の目で見る</span></h3>
-        <p class="desc"><span class="en">Observe lessons and daily school life at two schools in Tokyo.</span><span class="ja">東京の2校で、授業と日々の学校生活を見学します。</span></p>
-        <ul>
-          <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><span class="en">Lesson observation at two schools</span><span class="ja">2校での授業見学</span></span></li>
-          <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><span class="en">Observation notes to compare what you saw</span><span class="ja">2校を比べられる見学メモ</span></span></li>
-        </ul>
-      </article>
-      <article class="gain">
-        <span class="ico"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h12v8H8l-4 3v-3H3zM15 10h8v8h-1v3l-4-3h-3v-4"/></svg></span>
-        <h3><span class="en">Connect with Japanese Educators</span><span class="ja">日本の先生と対話する</span></h3>
-        <p class="desc"><span class="en">Gain new perspectives through conversations with Japanese teachers.</span><span class="ja">日本の先生との対話を通じて、新しい視点を得ます。</span></p>
-        <ul>
-          <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><span class="en">Conversations with teachers at each school</span><span class="ja">訪問校の先生との対話</span></span></li>
-          <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><span class="en">Exchange with fellow educators in your group</span><span class="ja">参加者同士の意見交換</span></span></li>
-        </ul>
-      </article>
-      <article class="gain">
-        <span class="ico"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M13 3a7 7 0 0 0-4 12.7V19h8v-3.3A7 7 0 0 0 13 3zM10 22.5h6"/></svg></span>
-        <h3><span class="en">Bring New Ideas Back Home</span><span class="ja">新しいアイデアを持ち帰る</span></h3>
-        <p class="desc"><span class="en">Leave with practical ideas for your own lessons and school.</span><span class="ja">自分の授業や学校で活かせるアイデアを持ち帰ります。</span></p>
-        <ul>
-          <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><span class="en">A guided reflection workshop</span><span class="ja">ファシリテーター付きの振り返りワークショップ</span></span></li>
-          <li><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9.5l4 4 8-9"/></svg><span><span class="en">Workshop materials and a certificate (planned)</span><span class="ja">ワークショップ教材と修了証（予定）</span></span></li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- PRICE -->
-<section class="price" id="price" aria-labelledby="price-title">
-  <div class="wrap">
-    <p class="eyebrow"><span class="en">Program fee</span><span class="ja">参加費</span></p>
-    <div class="fee-top">
-      <h2 id="price-title" class="amount">US$3,500<small><span class="en">per participant · group of up to 20 · international flights not included</span><span class="ja">1名あたり｜定員20名｜国際線航空券は含みません</span></small></h2>
-      <a class="btn btn-primary" href="#register"><span class="en">Register Your Interest</span><span class="ja">参加希望を登録する</span></a>
-    </div>
-    <p class="fee-label"><span class="en">What's included</span><span class="ja">参加費に含まれるもの</span></p>
-    <ul class="incl-cards">
-      <li class="ic-card"><span class="ico"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 18V6M2 14h18v4M20 14v-3a3 3 0 0 0-3-3H9v6"/><circle cx="5.5" cy="10.5" r="1.8"/></svg></span><b><span class="en">Hotel · 6 nights</span><span class="ja">ホテル6泊</span></b><span class="d"><span class="en">Twin share. Tokyo 3, Kyoto 2, Osaka 1. Single room available as an add-on.</span><span class="ja">2名1室。東京3泊・京都2泊・大阪1泊。1人1室は追加オプション。</span></span></li>
-      <li class="ic-card"><span class="ico"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 2v7a2 2 0 0 0 2 2M10 2v7a2 2 0 0 1-2 2v9M15 20V2c2 1 3 4 3 8h-3"/></svg></span><b><span class="en">Meals</span><span class="ja">食事</span></b><span class="d"><span class="en">Breakfast, lunch and dinner every day.</span><span class="ja">毎日の朝食・昼食・夕食。</span></span></li>
-      <li class="ic-card"><span class="ico"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="2" width="14" height="14" rx="4"/><path d="M4 10h14M7.5 13h.01M14.5 13h.01M7 16l-2 4M15 16l2 4"/></svg></span><b><span class="en">Transport</span><span class="ja">移動</span></b><span class="d"><span class="en">Airport transfers, bullet train to Kyoto, train to Osaka and local transport.</span><span class="ja">空港送迎、新幹線（東京→京都）、大阪への移動、市内交通。</span></span></li>
-      <li class="ic-card"><span class="ico"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="7" r="4"/><path d="M3 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span><b><span class="en">Guide · all 7 days</span><span class="ja">7日間の同行ガイド</span></b><span class="d"><span class="en">English-speaking guide and facilitator.</span><span class="ja">英語対応のガイド兼ファシリテーター。</span></span></li>
-      <li class="ic-card"><span class="ico"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 3h11l3 3v13H4zM8 9h7M8 13h7"/></svg></span><b><span class="en">Workshops</span><span class="ja">ワークショップ</span></b><span class="d"><span class="en">Orientation, reflection workshop, materials and certificate.</span><span class="ja">オリエンテーション、振り返り、教材・修了証。</span></span></li>
-      <li class="ic-card"><span class="ico"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 20h16M5 20V10M17 20V10M2 7h18M4 4h14M9 20v-5h4v5"/></svg></span><b><span class="en">Culture</span><span class="ja">文化体験</span></b><span class="d"><span class="en">Admission fees and a cultural experience in Kyoto.</span><span class="ja">拝観料・入場料と、京都での文化体験。</span></span></li>
-    </ul>
-    <div class="excl">
-      <p class="fee-label"><span class="en">Not included</span><span class="ja">含まれないもの</span></p>
-      <span class="chip"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 3l8 8M11 3l-8 8"/></svg><span class="en">International flights</span><span class="ja">国際線航空券</span></span>
-      <span class="chip"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 3l8 8M11 3l-8 8"/></svg><span class="en">Travel insurance</span><span class="ja">海外旅行保険</span></span>
-      <span class="chip"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 3l8 8M11 3l-8 8"/></svg><span class="en">Visa fees</span><span class="ja">ビザ費用</span></span>
-      <span class="chip"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 3l8 8M11 3l-8 8"/></svg><span class="en">Personal expenses</span><span class="ja">個人的な支出</span></span>
-    </div>
-    <div class="terms">
-      <div class="term"><b><span class="en">Payment</span><span class="ja">お支払い</span></b><span><span class="en">Nothing to pay when you register your interest. Payment timing and methods will be shared with the full details before you apply.</span><span class="ja">参加希望の登録時にお支払いはありません。支払時期と方法は、お申し込み前に詳細とあわせてご案内します。</span></span></div>
-      <div class="term"><b><span class="en">Cancellation</span><span class="ja">キャンセル</span></b><span><span class="en">The cancellation and refund policy will be shared before you apply.</span><span class="ja">キャンセル・返金の条件は、お申し込み前にご案内します。</span></span></div>
-      <div class="term"><b><span class="en">Changes</span><span class="ja">内容の変更</span></b><span><span class="en">If a school visit or part of the itinerary changes, we will tell you as early as possible.</span><span class="ja">訪問校や日程の一部が変わる場合は、できるだけ早くお知らせします。</span></span></div>
-    </div>
-    <p class="note"><span class="en">Planned inclusions. Final details will be confirmed before applications open.</span><span class="ja">現時点の予定です。最終的な内容は、申込受付の開始前に確定します。</span></p>
-  </div>
-</section>
-
-<!-- PHILOSOPHY -->
-<section class="philosophy" aria-labelledby="ph-title">
-  <div class="wrap">
-    <h2 id="ph-title" class="h2" style="max-width:18ch"><span class="en">More Than a Tour. A Journey of Professional Growth.</span><span class="ja">ただの旅行ではない。<br>教育者として成長する旅。</span></h2>
-    <p class="lede"><span class="en">There is no single right answer in education. Meaningful exchange between educators opens doors to new ideas.</span><span class="ja">教育には答えがあるわけではありません。教育者同士の対話が、新しい可能性を生み出すと考えています。</span></p>
-    <p class="sig">Japan Education Journey by raise your flag</p>
   </div>
 </section>
 
@@ -644,12 +654,12 @@ button[aria-busy="true"]{opacity:.7;cursor:progress}
 <section class="org" id="organiser" aria-labelledby="org-title">
   <div class="wrap org-grid">
     <div class="org-copy">
-      <p class="eyebrow"><span class="en">Who we are</span><span class="ja">主催者について</span></p>
-      <h2 id="org-title" class="h2"><span class="en">Organised by Raise Your Flag</span><span class="ja">主催：一般社団法人 Raise Your Flag</span></h2>
+      <p class="eyebrow"><span class="en">Who we are</span><span class="ja">私たちについて</span></p>
+      <h2 id="org-title" class="h2"><span class="en">Raise Your Flag</span><span class="ja">一般社団法人 Raise Your Flag</span></h2>
       <p class="lede"><span class="en">A general incorporated association based in Kyoto, Japan. We create places where people meet, talk and learn from each other.</span><span class="ja">京都を拠点に、人が出会い、対話し、学び合う場をつくる一般社団法人です。</span></p>
-      <p class="lede"><span class="en">Through Edu-tabi, we have taken Japanese educators to schools in six countries, including Denmark, the Netherlands and Finland. Japan Education Journey is the same journey in reverse.</span><span class="ja">「Edu旅」では、デンマーク・オランダ・フィンランドなど6か国の学校を日本の教育者と訪ねてきました。Japan Education Journeyは、その日本版です。</span></p>
+      <p class="lede"><span class="en">Through Edu-tabi, we have taken Japanese educators to schools in six countries, including Denmark, the Netherlands and Finland. Japan Education Journey brings the same experience to groups visiting Japan.</span><span class="ja">「Edu旅」では、デンマーク・オランダ・フィンランドなど6か国の学校を日本の教育者と訪ねてきました。Japan Education Journeyでは、その経験を日本を訪れるグループに届けます。</span></p>
       <div class="stats">
-        <div class="stat"><b>8</b><span><span class="en">programs in education, exchange and community</span><span class="ja">教育・交流・地域づくりの事業</span></span></div>
+        <div class="stat"><b>8</b><span><span class="en">programmes in education, exchange and community</span><span class="ja">教育・交流・地域づくりの事業</span></span></div>
         <div class="stat"><b>200+</b><span><span class="en">participants in our facilitation course</span><span class="ja">ファシリテーション講座の受講生</span></span></div>
         <div class="stat"><b>6</b><span><span class="en">countries visited on Edu-tabi school tours</span><span class="ja">Edu旅で訪れた国</span></span></div>
       </div>
@@ -659,7 +669,7 @@ button[aria-busy="true"]{opacity:.7;cursor:progress}
       <span class="person"><span class="en">Kosei Nakano</span><span class="ja">中野 康生</span></span>
       <span class="note" style="margin-top:-10px"><span class="en">Head of Inbound, Raise Your Flag</span><span class="ja">Raise Your Flag インバウンド事業部 部長</span></span>
       <dl>
-        <div><dt><span class="en">Organiser</span><span class="ja">主催</span></dt><dd><span class="en">Raise Your Flag (general incorporated association)</span><span class="ja">一般社団法人 Raise Your Flag</span></dd></div>
+        <div><dt><span class="en">Organiser</span><span class="ja">運営</span></dt><dd><span class="en">Raise Your Flag (general incorporated association)</span><span class="ja">一般社団法人 Raise Your Flag</span></dd></div>
         <div><dt><span class="en">Based in</span><span class="ja">所在地</span></dt><dd><span class="en">Sakyo-ku, Kyoto, Japan</span><span class="ja">京都府京都市左京区</span></dd></div>
         <div><dt><span class="en">Email</span><span class="ja">メール</span></dt><dd><a href="mailto:raiseyourflag.japan@gmail.com">raiseyourflag.japan@gmail.com</a></dd></div>
       </dl>
@@ -672,74 +682,59 @@ button[aria-busy="true"]{opacity:.7;cursor:progress}
   <div class="wrap faq-grid">
     <div>
       <p class="eyebrow">FAQ</p>
-      <h2 id="faq-title" class="h2"><span class="en">Questions, answered.</span><span class="ja">よくある質問</span></h2>
+      <h2 id="faq-title" class="h2"><span class="en">Questions from Travel Partners</span><span class="ja">旅行会社さまからのよくある質問</span></h2>
     </div>
     <div class="acc">
-      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-b1"><span><span class="en">Who is Japan Education Journey for?</span><span class="ja">どんな人が対象ですか？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-1" role="region" aria-labelledby="faq-b1" hidden><p><span class="en">Current teachers and educators interested in learning from Japanese schools and educational culture.</span><span class="ja">日本の学校や教育文化から学びたい、現職の先生・教育関係者が対象です。</span></p></div></div>
-      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-b2"><span><span class="en">What will I experience?</span><span class="ja">何を体験できますか？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-2" role="region" aria-labelledby="faq-b2" hidden><p><span class="en">Visits to two schools in Tokyo, time with Japanese educators, a cultural experience in Kyoto, and travel through Tokyo, Kyoto and Osaka. Final activities are subject to confirmation.</span><span class="ja">東京の学校2校の訪問、日本の先生との交流、京都での文化体験、東京・京都・大阪の移動が含まれます。最終的な内容は今後確定します。</span></p></div></div>
-      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-b3"><span><span class="en">Do I need to speak Japanese?</span><span class="ja">日本語は必要ですか？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-3" role="region" aria-labelledby="faq-b3" hidden><p><span class="en">No. The program is planned to run in English, with an English-speaking guide and facilitator throughout.</span><span class="ja">不要です。英語で進行する予定で、7日間を通して英語対応のガイド兼ファシリテーターが同行します。</span></p></div></div>
-      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-b4"><span><span class="en">When will it take place?</span><span class="ja">開催時期はいつですか？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-4" role="region" aria-labelledby="faq-b4" hidden><p><span class="en">The program runs during overseas school holidays, so teachers can join without missing class. Exact dates will be announced soon.</span><span class="ja">海外の学校の長期休暇の時期に開催します。授業を休まずに参加できます。具体的な日程は決まり次第ご案内します。</span></p></div></div>
-      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-b5"><span><span class="en">How much does it cost?</span><span class="ja">参加費はいくらですか？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-5" role="region" aria-labelledby="faq-b5" hidden><p><span class="en">US$3,500 per participant, excluding international flights. See “Program fee” above for what is planned to be included.</span><span class="ja">1名あたりUS$3,500（国際線航空券は別）です。含まれる内容の予定は、上の「参加費」をご覧ください。</span></p></div></div>
-      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-6" id="faq-b6"><span><span class="en">How many people are in the group?</span><span class="ja">何人で参加しますか？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-6" role="region" aria-labelledby="faq-b6" hidden><p><span class="en">Up to 20 participants, so everyone can take part in school visits and conversations.</span><span class="ja">定員は20名です。学校訪問や対話に全員がしっかり参加できる人数にしています。</span></p></div></div>
-      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-7" id="faq-b7"><span><span class="en">What happens after I register my interest?</span><span class="ja">参加希望を登録したあとは？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-7" role="region" aria-labelledby="faq-b7" hidden><p><span class="en">We will email you the dates and full details as soon as they are confirmed. Registering is free and does not commit you to anything. You can then decide whether to apply.</span><span class="ja">日程と詳細が決まり次第、メールでお知らせします。登録は無料で、参加の義務はありません。内容をご確認のうえ、お申し込みをご検討ください。</span></p></div></div>
-      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-8" id="faq-b8"><span><span class="en">Are flights and accommodation included?</span><span class="ja">航空券と宿泊は含まれますか？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-8" role="region" aria-labelledby="faq-b8" hidden><p><span class="en">Six nights of hotel accommodation are included (twin share; single room available as an add-on). International flights are not included.</span><span class="ja">ホテル6泊（2名1室）は含まれます。1人1室は追加オプションです。国際線航空券は含まれません。</span></p></div></div>
-      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-9" id="faq-b9"><span><span class="en">Which schools will we visit?</span><span class="ja">どの学校を訪問しますか？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-9" role="region" aria-labelledby="faq-b9" hidden><p><span class="en">Jiyu Gakuen in Tokyo is confirmed. A second Tokyo school will be announced once arrangements are final. Schools are set by the program and cannot be chosen individually.</span><span class="ja">東京の自由学園が確定しています。2校目は調整が済み次第お知らせします。訪問校はプログラムで決まっており、個別に選ぶことはできません。</span></p></div></div>
-      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-10" id="faq-b10"><span><span class="en">What if the itinerary changes?</span><span class="ja">日程が変わることはありますか？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-10" role="region" aria-labelledby="faq-b10" hidden><p><span class="en">The itinerary is provisional. If a school visit or activity changes, we will tell you as early as possible.</span><span class="ja">現在の日程は想定です。学校訪問や体験の内容が変わる場合は、できるだけ早くお知らせします。</span></p></div></div>
-      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-11" id="faq-b11"><span><span class="en">What is the cancellation policy?</span><span class="ja">キャンセル規定は？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-11" role="region" aria-labelledby="faq-b11" hidden><p><span class="en">The cancellation and refund policy will be shared with the full program details before you apply. Registering your interest is free.</span><span class="ja">キャンセル・返金の条件は、お申し込み前に詳細とあわせてご案内します。参加希望の登録は無料です。</span></p></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-b1"><span><span class="en">Who are your programmes for?</span><span class="ja">どんなグループが対象ですか？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-1" role="region" aria-labelledby="faq-b1" hidden><p><span class="en">School groups (students with their teachers), teachers and school leaders, and other education professionals.</span><span class="ja">生徒と引率の先生の学校グループ、先生や学校管理職、その他の教育関係者のグループです。</span></p></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-b2"><span><span class="en">Can we build a completely custom itinerary?</span><span class="ja">行程を一から組むことはできますか？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-2" role="region" aria-labelledby="faq-b2" hidden><p><span class="en">Yes. The sample programmes are starting points. Tell us the destinations, length, content and budget, and we will design the trip around them.</span><span class="ja">はい。プラン例はたたき台です。行き先・日数・内容・予算を教えていただければ、それに合わせて企画します。</span></p></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-b3"><span><span class="en">Which schools can groups visit?</span><span class="ja">どの学校を訪問できますか？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-3" role="region" aria-labelledby="faq-b3" hidden><p><span class="en">Our first partner is Jiyu Gakuen in Tokyo, and we are adding more. The school for each trip is arranged with the schools, based on dates and availability.</span><span class="ja">最初の提携校は東京の自由学園で、提携校を順次増やしています。訪問校は、日程と各校の都合に合わせて調整します。</span></p></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-b4"><span><span class="en">Can students take part in lessons and meet Japanese students?</span><span class="ja">生徒が授業に参加したり、日本の生徒と交流したりできますか？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-4" role="region" aria-labelledby="faq-b4" hidden><p><span class="en">Yes. We can arrange lesson participation and exchange sessions with Japanese students. The exact content is agreed with the host school.</span><span class="ja">はい。授業参加や日本の生徒との交流会を手配できます。具体的な内容は受け入れ校と相談して決めます。</span></p></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-b5"><span><span class="en">How are the prices calculated?</span><span class="ja">価格はどう決まりますか？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-5" role="region" aria-labelledby="faq-b5" hidden><p><span class="en">The prices shown are guide prices per participant for a group of 20. Your quote depends on dates, group size, hotels and activities. Partner terms are discussed individually.</span><span class="ja">表示価格は20名の場合の参加者1名あたりの目安です。日程、人数、ホテル、内容によってお見積もりが変わります。旅行会社さまとの条件は個別にご相談します。</span></p></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-6" id="faq-b6"><span><span class="en">When is the best time to visit schools?</span><span class="ja">学校訪問に向いている時期は？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-6" role="region" aria-labelledby="faq-b6" hidden><p><span class="en">Japanese schools are in session most of the year, except the spring break (late March to early April), summer break (late July to August) and winter break (late December to early January). We suggest dates that work for the host school.</span><span class="ja">日本の学校は、春休み（3月下旬〜4月上旬）、夏休み（7月下旬〜8月）、冬休み（12月下旬〜1月上旬）を除いて授業があります。受け入れ校の都合に合う日程をご提案します。</span></p></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-7" id="faq-b7"><span><span class="en">What language are the programmes run in?</span><span class="ja">何語で行われますか？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-7" role="region" aria-labelledby="faq-b7" hidden><p><span class="en">English. An English-speaking guide and facilitator travels with each group.</span><span class="ja">英語です。英語対応のガイド兼ファシリテーターが各グループに同行します。</span></p></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-8" id="faq-b8"><span><span class="en">How do we get started?</span><span class="ja">まず何をすればよいですか？</span></span><span class="ic" aria-hidden="true">+</span></button></h3><div class="acc-panel" id="faq-8" role="region" aria-labelledby="faq-b8" hidden><p><span class="en">Send us the form below with what you know so far. We will reply by email with questions or a first proposal.</span><span class="ja">わかっている範囲で、下のフォームからお送りください。メールでご質問やプラン案をお返しします。</span></p></div></div>
     </div>
   </div>
 </section>
 
-<!-- REGISTER -->
-<section class="register" id="register" aria-labelledby="reg-title">
+<!-- ENQUIRE -->
+<section class="register" id="enquire" aria-labelledby="reg-title">
   <div class="wrap reg-grid">
     <div class="reg-copy">
-      <p class="eyebrow"><span class="en">Register your interest</span><span class="ja">参加希望の登録</span></p>
-      <h2 id="reg-title" class="h2"><span class="en">Ready to See Education Differently?</span><span class="ja">教育の見方を変える旅へ。</span></h2>
-      <p><span class="en">Be the first to hear about program dates and details. No payment required at this stage.</span><span class="ja">開催日程などの詳細を、いち早くお知らせします。この段階でのお支払いはありません。</span></p>
+      <p class="eyebrow"><span class="en">Request a proposal</span><span class="ja">プランの相談・見積もり依頼</span></p>
+      <h2 id="reg-title" class="h2"><span class="en">Tell Us About Your Group</span><span class="ja">グループについて教えてください</span></h2>
+      <p><span class="en">Share what you know so far. We will reply by email with a draft itinerary and a quote. Proposals are free.</span><span class="ja">わかっている範囲で構いません。行程案とお見積もりをメールでお送りします。ご提案は無料です。</span></p>
       <ol class="steps">
-        <li><span><span class="en">Register your interest</span><span class="ja">参加希望を登録</span></span></li>
-        <li><span><span class="en">Receive dates and full details</span><span class="ja">日程と詳細をお知らせ</span></span></li>
-        <li><span><span class="en">Apply to secure your place (up to 20)</span><span class="ja">お申し込みで参加確定（定員20名）</span></span></li>
+        <li><span><span class="en">Send this form</span><span class="ja">このフォームを送信</span></span></li>
+        <li><span><span class="en">Receive a draft itinerary and quote</span><span class="ja">行程案とお見積もりが届く</span></span></li>
+        <li><span><span class="en">Adjust it together with us</span><span class="ja">一緒に調整して確定</span></span></li>
       </ol>
     </div>
     <form class="form" id="interest-form" novalidate>
-      <div class="seg" role="radiogroup" aria-label="Registration type">
-        <label><input type="radio" name="type" value="individual" checked><span><span class="en">Individual</span><span class="ja">個人</span></span></label>
-        <label><input type="radio" name="type" value="group"><span><span class="en">Group</span><span class="ja">団体（学校・組織）</span></span></label>
+      <div class="row">
+        <div class="field" id="f-company"><label for="company"><span class="en">Company / organisation</span><span class="ja">会社名・団体名</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="company" name="company" type="text" autocomplete="organization" required aria-describedby="company-err"><p class="err" id="company-err" aria-live="polite"></p></div>
+        <div class="field" id="f-contact"><label for="contact"><span class="en">Contact name</span><span class="ja">担当者名</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="contact" name="contact" type="text" autocomplete="name" required aria-describedby="contact-err"><p class="err" id="contact-err" aria-live="polite"></p></div>
       </div>
-      <div class="fs" data-mode="individual">
-        <div class="row">
-          <div class="field" id="f-name"><label for="name"><span class="en">Full name</span><span class="ja">氏名</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-err"><p class="err" id="name-err" aria-live="polite"></p></div>
-          <div class="field" id="f-email"><label for="email"><span class="en">Email</span><span class="ja">メールアドレス</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err"><p class="err" id="email-err" aria-live="polite"></p></div>
-        </div>
-        <div class="row">
-          <div class="field" id="f-country"><label for="country"><span class="en">Country / region</span><span class="ja">国・地域</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="country" name="country" type="text" autocomplete="country-name" required aria-describedby="country-err"><p class="err" id="country-err" aria-live="polite"></p></div>
-          <div class="field" id="f-school"><label for="school"><span class="en">School / organisation</span><span class="ja">学校・所属</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="school" name="school" type="text" autocomplete="organization" required aria-describedby="school-err"><p class="err" id="school-err" aria-live="polite"></p></div>
-        </div>
+      <div class="row">
+        <div class="field" id="f-email"><label for="email"><span class="en">Email</span><span class="ja">メールアドレス</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err"><p class="err" id="email-err" aria-live="polite"></p></div>
+        <div class="field" id="f-country"><label for="country"><span class="en">Country / region</span><span class="ja">国・地域</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="country" name="country" type="text" autocomplete="country-name" required aria-describedby="country-err"><p class="err" id="country-err" aria-live="polite"></p></div>
       </div>
-      <div class="fs" data-mode="group" hidden>
-        <div class="row">
-          <div class="field" id="f-organisation"><label for="organisation"><span class="en">School / organisation</span><span class="ja">学校・団体名</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="organisation" name="organisation" type="text" autocomplete="organization" required aria-describedby="organisation-err"><p class="err" id="organisation-err" aria-live="polite"></p></div>
-          <div class="field" id="f-contact"><label for="contact"><span class="en">Contact person</span><span class="ja">担当者名</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="contact" name="contact" type="text" autocomplete="name" required aria-describedby="contact-err"><p class="err" id="contact-err" aria-live="polite"></p></div>
-        </div>
-        <div class="row">
-          <div class="field" id="f-g_email"><label for="g_email"><span class="en">Email</span><span class="ja">メールアドレス</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="g_email" name="g_email" type="email" autocomplete="email" required aria-describedby="g_email-err"><p class="err" id="g_email-err" aria-live="polite"></p></div>
-          <div class="field" id="f-role"><label for="role"><span class="en">Role / position</span><span class="ja">役職</span> <span class="req"><span class="en">(optional)</span><span class="ja">（任意）</span></span></label><input id="role" name="role" type="text" autocomplete="organization-title"></div>
-        </div>
-        <div class="row">
-          <div class="field" id="f-g_country"><label for="g_country"><span class="en">Country / region</span><span class="ja">国・地域</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><input id="g_country" name="g_country" type="text" autocomplete="country-name" required aria-describedby="g_country-err"><p class="err" id="g_country-err" aria-live="polite"></p></div>
-          <div class="field" id="f-size"><label for="size"><span class="en">Expected group size</span><span class="ja">参加予定人数</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><select id="size" name="size" required aria-describedby="size-err"><option value="">—</option><option>2–5</option><option>6–10</option><option>11–20</option><option value="20+">More than 20 / 20名以上</option><option value="Not sure yet">Not sure yet / 未定</option></select><p class="err" id="size-err" aria-live="polite"></p></div>
-        </div>
-        <div class="field" id="f-timing"><label for="timing"><span class="en">Preferred timing (e.g. July 2027)</span><span class="ja">希望時期（例：2027年7月）</span> <span class="req"><span class="en">(optional)</span><span class="ja">（任意）</span></span></label><input id="timing" name="timing" type="text"></div>
+      <div class="row">
+        <div class="field" id="f-clients"><label for="clients"><span class="en">Client group</span><span class="ja">お客様の層</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><select id="clients" name="clients" required aria-describedby="clients-err"><option value="">—</option><option value="Students">Students / 生徒</option><option value="Educators">Educators / 先生・教育関係者</option><option value="Students and educators">Both / 両方</option><option value="Other">Other / その他</option></select><p class="err" id="clients-err" aria-live="polite"></p></div>
+        <div class="field" id="f-size"><label for="size"><span class="en">Group size</span><span class="ja">人数</span> <span class="req"><span class="en">(required)</span><span class="ja">（必須）</span></span></label><select id="size" name="size" required aria-describedby="size-err"><option value="">—</option><option value="Under 10">Under 10 / 10名未満</option><option value="10-20">10–20 / 10〜20名</option><option value="21-40">21–40 / 21〜40名</option><option value="Over 40">Over 40 / 40名以上</option><option value="Not sure yet">Not sure yet / 未定</option></select><p class="err" id="size-err" aria-live="polite"></p></div>
       </div>
-      <div class="field"><label for="message"><span class="en">Message (optional)</span><span class="ja">ご質問・ご要望（任意）</span></label><textarea id="message" name="message" rows="4"></textarea></div>
+      <div class="row">
+        <div class="field" id="f-timing"><label for="timing"><span class="en">Preferred dates or season</span><span class="ja">希望時期</span> <span class="req"><span class="en">(optional)</span><span class="ja">（任意）</span></span></label><input id="timing" name="timing" type="text"></div>
+        <div class="field" id="f-length"><label for="length"><span class="en">Trip length</span><span class="ja">日数</span> <span class="req"><span class="en">(optional)</span><span class="ja">（任意）</span></span></label><select id="length" name="length"><option value="">—</option><option value="3-4 days">3–4 days / 3〜4日</option><option value="5-7 days">5–7 days / 5〜7日</option><option value="8+ days">8+ days / 8日以上</option><option value="Flexible">Flexible / 未定</option></select></div>
+      </div>
+      <fieldset class="field"><legend><span class="en">Interested in</span><span class="ja">興味のある内容</span> <span class="req"><span class="en">(optional)</span><span class="ja">（任意）</span></span></legend><div class="checks"><label><input type="checkbox" name="interests" value="School visits"><span><span class="en">School visits</span><span class="ja">学校訪問</span></span></label><label><input type="checkbox" name="interests" value="Student exchange"><span><span class="en">Student exchange</span><span class="ja">生徒交流</span></span></label><label><input type="checkbox" name="interests" value="Teacher workshops"><span><span class="en">Teacher workshops</span><span class="ja">先生向けワークショップ</span></span></label><label><input type="checkbox" name="interests" value="Tokyo"><span><span class="en">Tokyo</span><span class="ja">東京</span></span></label><label><input type="checkbox" name="interests" value="Kyoto"><span><span class="en">Kyoto</span><span class="ja">京都</span></span></label><label><input type="checkbox" name="interests" value="Osaka"><span><span class="en">Osaka</span><span class="ja">大阪</span></span></label><label><input type="checkbox" name="interests" value="Other regions"><span><span class="en">Other regions</span><span class="ja">その他の地域</span></span></label><label><input type="checkbox" name="interests" value="Cultural experiences"><span><span class="en">Cultural experiences</span><span class="ja">文化体験</span></span></label></div></fieldset>
+      <div class="field"><label for="message"><span class="en">Anything else we should know?</span><span class="ja">その他のご要望</span> <span class="req"><span class="en">(optional)</span><span class="ja">（任意）</span></span></label><textarea id="message" name="message" rows="4"></textarea></div>
       <div class="hp" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-      <p class="privacy"><span class="en">We use your details only to send you updates about Japan Education Journey.</span><span class="ja">ご入力いただいた情報は、Japan Education Journeyのご案内にのみ使用します。</span></p>
-      <button class="btn btn-primary" type="submit" id="submit-btn" style="justify-self:start"><span class="en">Register Your Interest</span><span class="ja">参加希望を登録する</span></button>
+      <p class="privacy"><span class="en">We use your details only to reply to your enquiry.</span><span class="ja">ご入力いただいた情報は、お問い合わせへの返信にのみ使用します。</span></p>
+      <button class="btn btn-primary" type="submit" id="submit-btn" style="justify-self:start"><span class="en">Request a Proposal</span><span class="ja">相談・見積もりを依頼する</span></button>
       <div class="form-status" id="status-off" role="status" aria-live="polite" hidden>
         <strong><span class="en">Your details have not been sent.</span><span class="ja">入力内容はまだ送信されていません。</span></strong>
-        <span><span class="en">Online registration is not connected yet, so nothing was saved. To register now, please email us:</span><span class="ja">オンライン登録は準備中のため、情報は保存・送信されていません。今すぐ登録をご希望の方はメールでご連絡ください。</span></span>
+        <span><span class="en">Online enquiries are not connected yet, so nothing was saved. Please email us:</span><span class="ja">オンライン送信は準備中のため、情報は保存・送信されていません。メールでご連絡ください。</span></span>
         <span class="email-row"><code class="contact-email">raiseyourflag.japan@gmail.com</code></span>
       </div>
       <div class="form-status" id="status-err" role="alert" hidden>
@@ -750,8 +745,8 @@ button[aria-busy="true"]{opacity:.7;cursor:progress}
     </form>
     <div class="form thanks" id="thanks" tabindex="-1" hidden>
       <span class="ok" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 14.5l5 5 11-12"/></svg></span>
-      <h3><span class="en">Thank you for registering!</span><span class="ja">ご登録ありがとうございます。</span></h3>
-      <p><span class="en">We have received your details and sent a confirmation email. We will contact you with the dates and full details as soon as they are confirmed.</span><span class="ja">ご登録内容を受け付け、確認メールをお送りしました。開催日程と詳細が決まり次第、ご連絡します。</span></p>
+      <h3><span class="en">Thank you for your enquiry.</span><span class="ja">お問い合わせありがとうございます。</span></h3>
+      <p><span class="en">We have received your details and sent a confirmation email. We will reply with questions or a first proposal.</span><span class="ja">内容を受け付け、確認メールをお送りしました。ご質問またはプラン案をメールでお送りします。</span></p>
       <p class="note"><span class="en">No email? Please check your spam folder, or contact raiseyourflag.japan@gmail.com.</span><span class="ja">メールが届かない場合は、迷惑メールフォルダをご確認いただくか、raiseyourflag.japan@gmail.com までご連絡ください。</span></p>
     </div>
   </div>
@@ -759,23 +754,22 @@ button[aria-busy="true"]{opacity:.7;cursor:progress}
 
 </main>
 
-<div class="mcta" id="mcta" data-hidden="true"><a class="btn btn-primary" href="#register"><span class="en">Register Your Interest</span><span class="ja">参加希望を登録する</span></a></div>
+<div class="mcta" id="mcta" data-hidden="true"><a class="btn btn-primary" href="#enquire"><span class="en">Request a Proposal</span><span class="ja">プランの相談・見積もり依頼</span></a></div>
 
 <footer class="site-footer">
   <div class="wrap">
     <div class="foot-grid">
       <div>
         <a class="brand" href="#top"><img loading="lazy" decoding="async" src="assets/logowhite.png" width="600" height="217" alt="raise your flag"><span class="div" aria-hidden="true"></span><span class="name">Japan Education Journey</span></a>
-        <p style="margin-top:14px"><span class="en">A Professional Learning Journey in Japan</span><span class="ja">日本でのプロフェッショナル・ラーニング</span></p>
+        <p style="margin-top:14px"><span class="en">Custom educational tours to Japan</span><span class="ja">日本へのオーダーメイド教育旅行</span></p>
       </div>
       <nav class="foot-links" aria-label="Footer">
-        <a href="#about"><span class="en">About</span><span class="ja">概要</span></a>
-        <a href="#explore"><span class="en">What You'll Do</span><span class="ja">何をするか</span></a>
-        <a href="#schools"><span class="en">Schools</span><span class="ja">訪問校</span></a>
-        <a href="#schedule"><span class="en">Schedule</span><span class="ja">スケジュール</span></a>
-        <a href="#takehome"><span class="en">What You'll Gain</span><span class="ja">得られること</span></a>
-        <a href="#price"><span class="en">Price</span><span class="ja">参加費</span></a>
-        <a href="#organiser"><span class="en">Who We Are</span><span class="ja">主催者</span></a>
+        <a href="#why"><span class="en">Why Us</span><span class="ja">強み</span></a>
+        <a href="#services"><span class="en">What We Arrange</span><span class="ja">手配内容</span></a>
+        <a href="#schools"><span class="en">Partner School</span><span class="ja">提携校</span></a>
+        <a href="#programmes"><span class="en">Sample Programmes</span><span class="ja">プラン例</span></a>
+        <a href="#how"><span class="en">How It Works</span><span class="ja">ご依頼の流れ</span></a>
+        <a href="#organiser"><span class="en">Who We Are</span><span class="ja">私たちについて</span></a>
         <a href="#faq">FAQ</a>
       </nav>
     </div>
@@ -789,8 +783,8 @@ button[aria-busy="true"]{opacity:.7;cursor:progress}
 <script>
 (function(){
   var root=document.documentElement;
-  var msgs={en:{required:"Please fill in this field.",email:"Please enter a valid email address, e.g. name@school.org.",copied:"Copied.",copyFail:"Select the address above to copy it."},
-            ja:{required:"この項目を入力してください。",email:"正しいメールアドレスを入力してください（例：name@school.org）。",copied:"コピーしました。",copyFail:"上のアドレスを選択してコピーしてください。"}};
+  var msgs={en:{required:"Please fill in this field.",email:"Please enter a valid email address, e.g. name@company.com."},
+            ja:{required:"この項目を入力してください。",email:"正しいメールアドレスを入力してください（例：name@company.com）。"}};
   function lang(){return root.getAttribute('data-lang')||'en';}
   function setLang(l){
     root.setAttribute('data-lang',l); root.setAttribute('lang',l==='ja'?'ja':'en');
@@ -809,40 +803,37 @@ button[aria-busy="true"]{opacity:.7;cursor:progress}
   var ENDPOINT='';
   var form=document.getElementById('interest-form'),thanks=document.getElementById('thanks'),btn=document.getElementById('submit-btn'),
       sOff=document.getElementById('status-off'),sErr=document.getElementById('status-err'),touched=false;
-  var SETS={individual:['name','email','country','school'],group:['organisation','contact','g_email','g_country','size']};
-  function mode(){return form.querySelector('input[name="type"]:checked').value;}
+  var REQ=['company','contact','email','country','clients','size'];
   function hideStatus(){sOff.hidden=true;sErr.hidden=true;}
   function check(id){
     var el=document.getElementById(id),err=document.getElementById(id+'-err'),v=el.value.trim(),m='';
     if(!v){m=msgs[lang()].required;}else if(el.type==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){m=msgs[lang()].email;}
     err.textContent=m; el.setAttribute('aria-invalid',m?'true':'false'); document.getElementById('f-'+id).setAttribute('data-invalid',m?'true':'false'); return !m;
   }
-  function revalidate(){if(touched){SETS[mode()].forEach(check);}}
-  Object.keys(SETS).forEach(function(k){SETS[k].forEach(function(id){var el=document.getElementById(id);
+  function revalidate(){if(touched){REQ.forEach(check);}}
+  REQ.forEach(function(id){var el=document.getElementById(id);
     el.addEventListener('blur',function(){if(touched||el.value)check(id);});
-    el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){if(touched)check(id);hideStatus();});});});
-  form.querySelectorAll('input[name="type"]').forEach(function(r){r.addEventListener('change',function(){
-    form.querySelectorAll('.fs').forEach(function(f){f.hidden=f.getAttribute('data-mode')!==mode();});touched=false;hideStatus();});});
+    el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){if(touched)check(id);hideStatus();});});
   function val(id){return document.getElementById(id).value.trim();}
   form.addEventListener('submit',function(e){
-    e.preventDefault();touched=true;hideStatus();var ok=true,first=null,m=mode();
-    SETS[m].forEach(function(id){if(!check(id)){ok=false;if(!first)first=document.getElementById(id);}});
+    e.preventDefault();touched=true;hideStatus();var ok=true,first=null;
+    REQ.forEach(function(id){if(!check(id)){ok=false;if(!first)first=document.getElementById(id);}});
     if(!ok){first.focus();return;}
     if(!ENDPOINT){sOff.hidden=false;sOff.scrollIntoView({block:'nearest',behavior:'smooth'});return;}
-    var d=new URLSearchParams();d.append('type',m);d.append('lang',lang());d.append('message',val('message'));d.append('website',val('website'));
-    if(m==='group'){d.append('organisation',val('organisation'));d.append('contact',val('contact'));d.append('role',val('role'));d.append('email',val('g_email'));d.append('country',val('g_country'));d.append('size',val('size'));d.append('timing',val('timing'));}
-    else{d.append('name',val('name'));d.append('email',val('email'));d.append('country',val('country'));d.append('school',val('school'));}
+    var d=new URLSearchParams();d.append('type','agency');d.append('lang',lang());
+    ['company','contact','email','country','clients','size','timing','length','message','website'].forEach(function(id){d.append(id,val(id));});
+    d.append('interests',[].map.call(form.querySelectorAll('input[name="interests"]:checked'),function(c){return c.value;}).join(', '));
     btn.disabled=true;btn.setAttribute('aria-busy','true');
     fetch(ENDPOINT,{method:'POST',body:d}).then(function(r){return r.json();}).then(function(res){
       if(!res||!res.ok)throw new Error('save');
       form.hidden=true;thanks.hidden=false;thanks.focus();thanks.scrollIntoView({block:'center',behavior:'smooth'});
-      try{(window.dataLayer=window.dataLayer||[]).push({event:'jej_register',registration_type:m});
-        if(window.gtag)gtag('event','generate_lead',{registration_type:m});
-        if(window.fbq)fbq('track','Lead',{content_category:m});}catch(x){}
+      try{(window.dataLayer=window.dataLayer||[]).push({event:'jej_enquiry'});
+        if(window.gtag)gtag('event','generate_lead');
+        if(window.fbq)fbq('track','Lead');}catch(x){}
     }).catch(function(){sErr.hidden=false;sErr.scrollIntoView({block:'nearest',behavior:'smooth'});})
     .then(function(){btn.disabled=false;btn.removeAttribute('aria-busy');});
   });
-  var mcta=document.getElementById('mcta'),reg=document.getElementById('register'),hero=document.querySelector('.hero');
+  var mcta=document.getElementById('mcta'),reg=document.getElementById('enquire'),hero=document.querySelector('.hero');
   if('IntersectionObserver' in window&&mcta){var vis={};var io=new IntersectionObserver(function(es){es.forEach(function(e){vis[e.target===reg?'r':'h']=e.isIntersecting;});mcta.setAttribute('data-hidden',String(!!(vis.r||vis.h)));});io.observe(reg);io.observe(hero);}
   var saved=null;try{saved=localStorage.getItem('jej-lang');}catch(e){}
   if(saved==='ja'||saved==='en'){setLang(saved);}
