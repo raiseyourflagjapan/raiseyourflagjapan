@@ -800,7 +800,7 @@ fieldset.field legend{font-size:14px;font-weight:600;padding:0;margin-bottom:8px
   document.querySelectorAll('img').forEach(function(img){
     img.addEventListener('error',function(){var d=document.createElement('div');d.className='img-fallback';d.setAttribute('role','img');d.setAttribute('aria-label',img.alt);d.textContent=img.alt;img.replaceWith(d);},{once:true});
   });
-  var ENDPOINT='';
+  var ENDPOINT='https://script.google.com/macros/s/AKfycbyd1-_-nbh3lV_KuuGu15w_zjg3FVGS8cS1d-ejk41B-mik8sxwR-_V9GM8vTKc5ozU/exec';
   var form=document.getElementById('interest-form'),thanks=document.getElementById('thanks'),btn=document.getElementById('submit-btn'),
       sOff=document.getElementById('status-off'),sErr=document.getElementById('status-err'),touched=false;
   var REQ=['company','contact','email','country','clients','size'];
